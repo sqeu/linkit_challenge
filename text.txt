@@ -18,8 +18,13 @@ Hive Warehouse Connector (HWC)
 different catalogs from hdp 3.0 - https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_configure_a_spark_hive_connection.html
 
 hdfs dfs -ls /workspace/data-spark
+cd /workspace/
+cp /etc/hbase/conf/hbase-site.xml /etc/spark2/conf/
+export SPARK_CLASSPATH=/usr/hdp/current/hbase-client/lib/hbase-common.jar:/usr/hdp/current/hbase-client/lib/hbase-client.jar:/usr/hdp/current/hbase-client/lib/hbase-server.jar:/usr/hdp/current/hbase-client/lib/hbase-protocol.jar:/usr/hdp/current/hbase-client/lib/guava-12.0.1.jar:/etc/hbase/conf/hbase-site.xml
 
-spark-shell --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/
+spark-shell --master yarn --deploy-mode client --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --files /etc/hbase/conf/hbase-site.xml
+spark-shell  --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 
 
+anadir rowkey incremente, no tienen implementado eso y seria mala idea, porq en concurrencia crearia bottleneck al tratar de escribir en la misma region
 
 spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apache.spark.sql.execution.datasources.hbase").load()

@@ -36,7 +36,7 @@ object HBaseRecord
 
 class HbaseApp extends SparkSessionBuilder {
   def catalog = s"""{
-                   |"table":{"namespace":"default", "name":"dangerous_driving "},
+                   |"table":{"namespace":"default", "name":"dangerous_driving"},
                    |"rowkey":"eventId",
                    ||"columns":{
                    ||"eventId":{"cf":"rowkey","col":"eventId","type":"string"},
@@ -56,32 +56,35 @@ class HbaseApp extends SparkSessionBuilder {
     spark
       .read
       .options(Map(HBaseTableCatalog.tableCatalog->cat))
-      .format("org.apache.hadoop.hbase.spark")
+      .format("org.apache.spark.sql.execution.datasources.hbase")
       .load()
   }
   def createTable(){
     //subir hdfs
     //leer csv
-    val dangerous_driving = spark.read.csv("")
+val filePath ="/workspace/data-hbase/dangerous-driver.csv"
+    val dangerous_driver = spark.read.format("csv").option("header", "true").load(filePath)
     //cargar hdfs a tabla
-    dangerous_driving.write.options(
-      Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "5"))
-      .format("org.apache.spark.sql.execution.datasources.hbase")
-      .save()
-    val extra_driver = spark.read.csv("")
-    extra_driver.write.options(
-      Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "5"))
-      .format("org.apache.spark.sql.execution.datasources.hbase")
-      .save()
+    dangerous_driver.write.options(
+      Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "4")).
+      format("org.apache.spark.sql.execution.datasources.hbase").
+      save()
+val filePath2 ="/workspace/data-hbase/extra-driver.csv"
+    val extra_driver = spark.read.format("csv").option("header", "true").load(filePath2)
+    val extra_driver_mod = extra_driver.drop("eventId").
+withColumn("eventId",lit("4"))	
+    extra_driver_mod.write.options(
+      Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "4")).
+      format("org.apache.spark.sql.execution.datasources.hbase").
+      save()
 
     val df = withCatalog(catalog)
-    df.where("id==4")
-      .drop("routeName")
-      .withColumn("routeName",lit("Santa Clara to San Diego"))
+    val df_mod = df.where("eventId==4").drop("routeName").withColumn("routeName",lit("Los Angeles to Santa Clara"))
+	df_mod.write.options(Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "4")).
+      format("org.apache.spark.sql.execution.datasources.hbase").
+      save()
 
-    df
-      .filter(col("routeName").contains("Los Angeles"))
-      .collect()
+val df = withCatalog(catalog).filter(col("routeName").contains("Los Angeles")).collect()
     //probar q pasa si lo ejecuto otra vez?
 
   }
