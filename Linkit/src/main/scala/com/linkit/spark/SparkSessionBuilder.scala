@@ -10,22 +10,10 @@ class SparkSessionBuilder extends Serializable {
   def buildSparkSession: SparkSession = {
 
     @transient lazy val conf: SparkConf = new SparkConf()
-      .setAppName("Structured Streaming from Kafka to Cassandra")
+      .setAppName("LinkitSpark")
       .set("spark.master", "local")
-      //.set("spark.cassandra.connection.host","192.168.99.100")
-      //.set("spark.sql.streaming.checkpointLocation", "checkpoint")
-      .set("spark.cassandra.connection.host", "10.79.6.88,10.79.6.90,10.79.6.91,10.79.6.99,10.79.6.101")
-      .set("spark.cassandra.connection.port", "9042")
-      .set("spark.cassandra.output.ignoreNulls", "true")
-      //.set("spark.cassandra.connection.compression","SNAPPY")
-      .set("spark.cassandra.auth.username", "APSHDES")
-      .set("spark.cassandra.auth.password", "Q56ieTYpo90")
-      .set("spark.cassandra.connection.ssl.enabled","true")
-      .set("spark.cassandra.connection.ssl.keyStore.password","6ZVRrdXD25HEppm3eTSl")
-      .set("spark.cassandra.connection.ssl.keyStore.path","/opt/security/Alexandria-keystore-cloud-des.jks")
-      .set("spark.cassandra.connection.ssl.trustStore.path","/opt/security/Alexandria-truststore-cloud-des.jks")
-      .set("spark.cassandra.connection.ssl.trustStore.password","6ZVRrdXD25HEppm3eTSl")
-
+      .set("spark.hbase.host", "sandbox-hdp.hortonworks.com")
+      .set("spark.hbase.port","2181" )
 
     //@transient lazy val app = new SparkBaseApplication(Array(classOf[com.linkit.spark.SparkSessionBuilder]))
 

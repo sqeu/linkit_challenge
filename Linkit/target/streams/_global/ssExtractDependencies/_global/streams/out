@@ -1,12 +1,12 @@
 [error] sbt.librarymanagement.ResolveException: Error downloading org.apache.hbase:hbase-spark:2.0.2.3.1.0.6-1
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\S80240\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
+[error]   not found: C:\Users\hugo_\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/org/apache/hbase/hbase-spark/2.0.2.3.1.0.6-1/hbase-spark-2.0.2.3.1.0.6-1.pom
 [error] Error downloading com.hortonworks:shc-core:1.1.1-2.1-s_2.11
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\S80240\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
+[error]   not found: C:\Users\hugo_\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/com/hortonworks/shc-core/1.1.1-2.1-s_2.11/shc-core-1.1.1-2.1-s_2.11.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:245)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$34(CoursierDependencyResolution.scala:214)
@@ -41,10 +41,10 @@
 [error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.apache.hbase:hbase-spark:2.0.2.3.1.0.6-1
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\S80240\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
+[error]   not found: C:\Users\hugo_\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/org/apache/hbase/hbase-spark/2.0.2.3.1.0.6-1/hbase-spark-2.0.2.3.1.0.6-1.pom
 [error] Error downloading com.hortonworks:shc-core:1.1.1-2.1-s_2.11
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\S80240\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
+[error]   not found: C:\Users\hugo_\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/com/hortonworks/shc-core/1.1.1-2.1-s_2.11/shc-core-1.1.1-2.1-s_2.11.pom

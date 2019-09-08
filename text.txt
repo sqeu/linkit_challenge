@@ -1,0 +1,25 @@
+scp -P 2222 root@sandbox-hdp.hortonworks.com:/etc/hadoop/conf/core-site.xml .
+manually put data in server
+/user/maria_dev/workspace
+su hdfs
+hdfs dfs -mkdir -p /workspace/data/spark
+hdfs dfs -mkdir -p /workspace/data/hbase
+scp -P 2222 spark1_2.11-0.1.jar root@sandbox-hdp.hortonworks.com:/tmp
+ssh root@sandbox-hdp.hortonworks.com -p 2222
+
+manejar -, en nombre de columnas
+
+spark-submit --class HiveSpark --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
+spark-submit --class Example --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
+
+spark.sql("select * from driver").count()
+
+Hive Warehouse Connector (HWC) 
+different catalogs from hdp 3.0 - https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_configure_a_spark_hive_connection.html
+
+hdfs dfs -ls /workspace/data-spark
+
+spark-shell --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --repositories http://repo.hortonworks.com/content/groups/public/
+
+
+spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apache.spark.sql.execution.datasources.hbase").load()

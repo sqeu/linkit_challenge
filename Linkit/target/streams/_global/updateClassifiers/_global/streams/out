@@ -1,4 +1,4 @@
 [debug] "not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/C:/Users/S80240/Desktop/Everis/Linkit/"), "linkit")...
-[debug] Done updating ProjectRef(uri("file:/C:/Users/S80240/Desktop/Everis/Linkit/"), "linkit")
+[debug] Updating ProjectRef(uri("file:/C:/Users/hugo_/Desktop/Work/Linkit/linkit_challenge/Linkit/"), "linkit")...
+[debug] Done updating ProjectRef(uri("file:/C:/Users/hugo_/Desktop/Work/Linkit/linkit_challenge/Linkit/"), "linkit")
 [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
