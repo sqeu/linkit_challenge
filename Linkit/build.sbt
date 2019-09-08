@@ -24,6 +24,6 @@ libraryDependencies += "org.apache.hbase" % "hbase" % "2.0.2"
 
 resolvers += "Hortonworks Repository" at "https://repo.hortonworks.com/content/repositories/releases/"
 libraryDependencies += "org.apache.hbase" % "hbase-spark" % "2.0.2.3.1.0.6-1"
-libraryDependencies += "com.hortonworks" % "shc-core" % "1.1.1-2.1-s_2.11" from "C:\\Users\\hugo_\\Desktop\\Work\\Linkit\\linkit_challenge\\Linkit\\lib"
+libraryDependencies += "com.hortonworks" % "shc-core" % "1.1.1-2.1-s_2.11" from "file:\\..\\lib"
 libraryDependencies += "com.hortonworks" % "shc" % "1.1.1-2.1-s_2.11" pomOnly()
 

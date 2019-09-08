@@ -28,3 +28,12 @@ spark-shell  --repositories http://repo.hortonworks.com/content/groups/public/ -
 anadir rowkey incremente, no tienen implementado eso y seria mala idea, porq en concurrencia crearia bottleneck al tratar de escribir en la misma region
 
 spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apache.spark.sql.execution.datasources.hbase").load()
+
+create table hbase
+ 2 options - hbase librerias
+  	   - spark crear al insertar
+
+--TODO
+hivecatalog
+extras
+experience
