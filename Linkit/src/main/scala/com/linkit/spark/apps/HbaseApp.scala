@@ -83,8 +83,8 @@ object HbaseApp extends App{
   val utils = new Utils()
   utils.putHDFS(sourcePath,hdfs_data)
 
-  hbaseApp.loadDangerousDriver(hbaseApp+"dangerous-driver.csv",catalog)
-  hbaseApp.loadExtraDriver(hbaseApp+"extra-driver.csv",catalog)
+  hbaseApp.loadDangerousDriver(hbase_data+"dangerous-driver.csv",catalog)
+  hbaseApp.loadExtraDriver(hbase_data+"extra-driver.csv",catalog)
   hbaseApp.updateRoute("4","Los Angeles to Santa Clara",catalog)
   hbaseApp.getEventsWithRoute("Los Angeles",catalog)
 
