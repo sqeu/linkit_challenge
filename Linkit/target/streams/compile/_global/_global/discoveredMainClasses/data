@@ -1,1 +1,1 @@
-["HiveSpark"]
+["com.linkit.spark.apps.HbaseApp","com.linkit.spark.apps.HiveSpark"]
