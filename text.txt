@@ -12,6 +12,14 @@ manejar -, en nombre de columnas
 spark-submit --class HiveSpark --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
 spark-submit --class Example --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
 
+spark-shell --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar --conf "spark.sql.hive.hiveserver2.jdbc.url=jdbc:hive2://sandbox-hdp.hortonworks.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;user=hive" --conf "spark.datasource.hive.warehouse.metastoreUri=thrift://sandbox-hdp.hortonworks.com:9083" --conf "spark.hadoop.hive.llap.daemon.service.hosts=@llap0" --conf "spark.hadoop.hive.zookeeper.quorum=sandbox-hdp.hortonworks.com:2181"
+
+import com.hortonworks.hwc.HiveWarehouseSession
+import com.hortonworks.hwc.HiveWarehouseSession._
+val hive = HiveWarehouseSession.session(spark).build()
+hive
+hive.executeUpdate("CREATE SCHEMA XXX")
+
 spark.sql("select * from driver").count()
 
 Hive Warehouse Connector (HWC) 
@@ -25,15 +33,9 @@ export SPARK_CLASSPATH=/usr/hdp/current/hbase-client/lib/hbase-common.jar:/usr/h
 spark-shell --master yarn --deploy-mode client --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --files /etc/hbase/conf/hbase-site.xml
 spark-shell  --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 
 
+spark-submit --class HbaseApp --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 ./spark1_2.11-0.1.jar
+
 anadir rowkey incremente, no tienen implementado eso y seria mala idea, porq en concurrencia crearia bottleneck al tratar de escribir en la misma region
 
 spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apache.spark.sql.execution.datasources.hbase").load()
 
-create table hbase
- 2 options - hbase librerias
-  	   - spark crear al insertar
-
---TODO
-hivecatalog
-extras
-experience
