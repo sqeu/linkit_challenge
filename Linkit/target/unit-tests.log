@@ -1,0 +1,686 @@
+03:48:27.247 ScalaTest-run INFO SparkContext: Running Spark version 2.2.1
+03:48:28.119 ScalaTest-run INFO SparkContext: Submitted application: test-sql-context
+03:48:28.147 ScalaTest-run INFO SecurityManager: Changing view acls to: S80240
+03:48:28.148 ScalaTest-run INFO SecurityManager: Changing modify acls to: S80240
+03:48:28.148 ScalaTest-run INFO SecurityManager: Changing view acls groups to: 
+03:48:28.149 ScalaTest-run INFO SecurityManager: Changing modify acls groups to: 
+03:48:28.149 ScalaTest-run INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(S80240); groups with view permissions: Set(); users  with modify permissions: Set(S80240); groups with modify permissions: Set()
+03:48:29.542 ScalaTest-run INFO Utils: Successfully started service 'sparkDriver' on port 51542.
+03:48:29.565 ScalaTest-run INFO SparkEnv: Registering MapOutputTracker
+03:48:29.588 ScalaTest-run INFO SparkEnv: Registering BlockManagerMaster
+03:48:29.591 ScalaTest-run INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+03:48:29.592 ScalaTest-run INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+03:48:29.603 ScalaTest-run INFO DiskBlockManager: Created local directory at C:\Users\S80240\AppData\Local\Temp\blockmgr-ae383000-bd97-413b-ab90-3c390a8039b6
+03:48:29.659 ScalaTest-run INFO MemoryStore: MemoryStore started with capacity 868.8 MB
+03:48:29.702 ScalaTest-run INFO SparkEnv: Registering OutputCommitCoordinator
+03:48:29.789 ScalaTest-run INFO log: Logging initialized @4246ms
+03:48:29.865 ScalaTest-run INFO Server: jetty-9.3.z-SNAPSHOT
+03:48:29.883 ScalaTest-run INFO Server: Started @4342ms
+03:48:29.905 ScalaTest-run INFO AbstractConnector: Started ServerConnector@72ce442b{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+03:48:29.922 ScalaTest-run INFO Utils: Successfully started service 'SparkUI' on port 4040.
+03:48:29.947 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3deb2326{/jobs,null,AVAILABLE,@Spark}
+03:48:29.947 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1df98368{/jobs/json,null,AVAILABLE,@Spark}
+03:48:29.948 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@226f885f{/jobs/job,null,AVAILABLE,@Spark}
+03:48:29.951 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@52350abb{/jobs/job/json,null,AVAILABLE,@Spark}
+03:48:29.951 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1a6f2363{/stages,null,AVAILABLE,@Spark}
+03:48:29.952 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5ebd56e9{/stages/json,null,AVAILABLE,@Spark}
+03:48:29.953 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@641856{/stages/stage,null,AVAILABLE,@Spark}
+03:48:29.955 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@76318a7d{/stages/stage/json,null,AVAILABLE,@Spark}
+03:48:29.956 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3277e499{/stages/pool,null,AVAILABLE,@Spark}
+03:48:29.957 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@22c01ab0{/stages/pool/json,null,AVAILABLE,@Spark}
+03:48:29.957 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4c4d362a{/storage,null,AVAILABLE,@Spark}
+03:48:29.958 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@76b74e9c{/storage/json,null,AVAILABLE,@Spark}
+03:48:29.959 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@8ab78bc{/storage/rdd,null,AVAILABLE,@Spark}
+03:48:29.960 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@16afbd92{/storage/rdd/json,null,AVAILABLE,@Spark}
+03:48:29.960 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7fe083b1{/environment,null,AVAILABLE,@Spark}
+03:48:29.961 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@486be205{/environment/json,null,AVAILABLE,@Spark}
+03:48:29.962 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@74f7d1d2{/executors,null,AVAILABLE,@Spark}
+03:48:29.962 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5ca17ab0{/executors/json,null,AVAILABLE,@Spark}
+03:48:29.963 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1051817b{/executors/threadDump,null,AVAILABLE,@Spark}
+03:48:29.963 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@620aa4ea{/executors/threadDump/json,null,AVAILABLE,@Spark}
+03:48:29.969 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3174cb09{/static,null,AVAILABLE,@Spark}
+03:48:29.970 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@f31c0c6{/,null,AVAILABLE,@Spark}
+03:48:29.971 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4a9419d7{/api,null,AVAILABLE,@Spark}
+03:48:29.972 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3a0807b7{/jobs/job/kill,null,AVAILABLE,@Spark}
+03:48:29.972 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5769e7ae{/stages/stage/kill,null,AVAILABLE,@Spark}
+03:48:29.974 ScalaTest-run INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.56.1:4040
+03:48:30.060 ScalaTest-run INFO Executor: Starting executor ID driver on host localhost
+03:48:30.081 ScalaTest-run INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51555.
+03:48:30.082 ScalaTest-run INFO NettyBlockTransferService: Server created on 192.168.56.1:51555
+03:48:30.083 ScalaTest-run INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+03:48:30.084 ScalaTest-run INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.56.1, 51555, None)
+03:48:30.088 dispatcher-event-loop-2 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.56.1:51555 with 868.8 MB RAM, BlockManagerId(driver, 192.168.56.1, 51555, None)
+03:48:30.092 ScalaTest-run INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.56.1, 51555, None)
+03:48:30.093 ScalaTest-run INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.56.1, 51555, None)
+03:48:30.313 ScalaTest-run INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2873d672{/metrics/json,null,AVAILABLE,@Spark}
+03:48:30.371 ScalaTest-run-running-HiveSparkAppSuit INFO HiveSparkAppSuit: 
+
+===== TEST OUTPUT FOR com.linkit.test.HiveSparkAppSuit: 'Data insertion HiveSparkApp' =====
+
+03:48:30.389 ScalaTest-run-running-HiveSparkAppSuit INFO SharedState: loading hive config file: jar:file:/C:/Users/S80240/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/apache/spark/spark-sql_2.11/2.2.1/spark-sql_2.11-2.2.1-tests.jar!/hive-site.xml
+03:48:30.427 ScalaTest-run-running-HiveSparkAppSuit INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/spark-warehouse/').
+03:48:30.427 ScalaTest-run-running-HiveSparkAppSuit INFO SharedState: Warehouse path is 'file:/C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/spark-warehouse/'.
+03:48:30.434 ScalaTest-run-running-HiveSparkAppSuit INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1280851e{/SQL,null,AVAILABLE,@Spark}
+03:48:30.435 ScalaTest-run-running-HiveSparkAppSuit INFO ContextHandler: Started o.s.j.s.ServletContextHandler@56de6d6b{/SQL/json,null,AVAILABLE,@Spark}
+03:48:30.436 ScalaTest-run-running-HiveSparkAppSuit INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5b5c0057{/SQL/execution,null,AVAILABLE,@Spark}
+03:48:30.436 ScalaTest-run-running-HiveSparkAppSuit INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5ca1f591{/SQL/execution/json,null,AVAILABLE,@Spark}
+03:48:30.438 ScalaTest-run-running-HiveSparkAppSuit INFO ContextHandler: Started o.s.j.s.ServletContextHandler@273842a6{/static/sql,null,AVAILABLE,@Spark}
+03:48:31.510 ScalaTest-run-running-HiveSparkAppSuit INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+03:48:33.866 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Pruning directories with: 
+03:48:33.870 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0)) > 0)
+03:48:33.873 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+03:48:33.883 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Pushed Filters: 
+03:48:34.281 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 241.245249 ms
+03:48:34.712 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 19.861665 ms
+03:48:34.768 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 378.8 KB, free 868.4 MB)
+03:48:34.843 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 40.4 KB, free 868.4 MB)
+03:48:34.845 dispatcher-event-loop-1 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.56.1:51555 (size: 40.4 KB, free: 868.8 MB)
+03:48:34.851 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Created broadcast 0 from load at HiveSparkApp.scala:31
+03:48:34.862 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+03:48:34.978 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Starting job: load at HiveSparkApp.scala:31
+03:48:35.004 dag-scheduler-event-loop INFO DAGScheduler: Got job 0 (load at HiveSparkApp.scala:31) with 1 output partitions
+03:48:35.004 dag-scheduler-event-loop INFO DAGScheduler: Final stage: ResultStage 0 (load at HiveSparkApp.scala:31)
+03:48:35.005 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List()
+03:48:35.007 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List()
+03:48:35.013 dag-scheduler-event-loop INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at load at HiveSparkApp.scala:31), which has no missing parents
+03:48:35.073 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 8.2 KB, free 868.4 MB)
+03:48:35.077 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.3 KB, free 868.4 MB)
+03:48:35.078 dispatcher-event-loop-2 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.56.1:51555 (size: 4.3 KB, free: 868.8 MB)
+03:48:35.078 dag-scheduler-event-loop INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+03:48:35.090 dag-scheduler-event-loop INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at load at HiveSparkApp.scala:31) (first 15 tasks are for partitions Vector(0))
+03:48:35.091 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+03:48:35.132 dispatcher-event-loop-3 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 5367 bytes)
+03:48:35.143 Executor task launch worker for task 0 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+03:48:35.192 Executor task launch worker for task 0 INFO FileScanRDD: Reading File path: file:///C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/data-engineer-bootcamp-assessment-master/data-spark/drivers.csv, range: 0-2043, partition values: [empty row]
+03:48:35.208 Executor task launch worker for task 0 INFO CodeGenerator: Code generated in 10.249089 ms
+03:48:35.251 Executor task launch worker for task 0 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1307 bytes result sent to driver
+03:48:35.260 task-result-getter-0 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 139 ms on localhost (executor driver) (1/1)
+03:48:35.262 task-result-getter-0 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+03:48:35.266 dag-scheduler-event-loop INFO DAGScheduler: ResultStage 0 (load at HiveSparkApp.scala:31) finished in 0,158 s
+03:48:35.271 ScalaTest-run-running-HiveSparkAppSuit INFO DAGScheduler: Job 0 finished: load at HiveSparkApp.scala:31, took 0,292497 s
+03:48:35.313 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Pruning directories with: 
+03:48:35.313 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Post-Scan Filters: 
+03:48:35.314 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+03:48:35.314 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Pushed Filters: 
+03:48:35.324 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 7.868984 ms
+03:48:35.333 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 378.8 KB, free 868.0 MB)
+03:48:35.358 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 40.4 KB, free 868.0 MB)
+03:48:35.359 dispatcher-event-loop-2 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.56.1:51555 (size: 40.4 KB, free: 868.7 MB)
+03:48:35.361 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Created broadcast 2 from load at HiveSparkApp.scala:31
+03:48:35.361 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+03:48:35.443 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: driver
+03:48:35.673 ScalaTest-run-running-HiveSparkAppSuit INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+03:48:35.717 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Pruning directories with: 
+03:48:35.718 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Post-Scan Filters: 
+03:48:35.718 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Output Data Schema: struct<driverId: string, name: string, ssn: string, location: string, certified: string ... 1 more field>
+03:48:35.718 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Pushed Filters: 
+03:48:35.733 ScalaTest-run-running-HiveSparkAppSuit INFO FileOutputCommitter: File Output Committer Algorithm version is 2
+03:48:35.733 ScalaTest-run-running-HiveSparkAppSuit INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+03:48:35.734 ScalaTest-run-running-HiveSparkAppSuit INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+03:48:35.735 ScalaTest-run-running-HiveSparkAppSuit INFO FileOutputCommitter: File Output Committer Algorithm version is 2
+03:48:35.735 ScalaTest-run-running-HiveSparkAppSuit INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+03:48:35.736 ScalaTest-run-running-HiveSparkAppSuit INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+03:48:35.767 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 18.379591 ms
+03:48:35.773 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 381.3 KB, free 867.6 MB)
+03:48:35.822 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 40.4 KB, free 867.6 MB)
+03:48:35.823 dispatcher-event-loop-3 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.56.1:51555 (size: 40.4 KB, free: 868.7 MB)
+03:48:35.824 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Created broadcast 3 from saveAsTable at HiveSparkApp.scala:38
+03:48:35.826 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+03:48:35.870 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Starting job: saveAsTable at HiveSparkApp.scala:38
+03:48:35.871 dag-scheduler-event-loop INFO DAGScheduler: Got job 1 (saveAsTable at HiveSparkApp.scala:38) with 1 output partitions
+03:48:35.871 dag-scheduler-event-loop INFO DAGScheduler: Final stage: ResultStage 1 (saveAsTable at HiveSparkApp.scala:38)
+03:48:35.871 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List()
+03:48:35.871 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List()
+03:48:35.872 dag-scheduler-event-loop INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at saveAsTable at HiveSparkApp.scala:38), which has no missing parents
+03:48:35.903 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 128.1 KB, free 867.4 MB)
+03:48:35.909 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 47.9 KB, free 867.4 MB)
+03:48:35.911 dispatcher-event-loop-0 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.56.1:51555 (size: 47.9 KB, free: 868.6 MB)
+03:48:35.911 dag-scheduler-event-loop INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+03:48:35.913 dag-scheduler-event-loop INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at saveAsTable at HiveSparkApp.scala:38) (first 15 tasks are for partitions Vector(0))
+03:48:35.913 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+03:48:35.914 dispatcher-event-loop-1 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 5367 bytes)
+03:48:35.915 Executor task launch worker for task 1 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+03:48:35.965 Executor task launch worker for task 1 INFO FileOutputCommitter: File Output Committer Algorithm version is 2
+03:48:35.965 Executor task launch worker for task 1 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+03:48:35.966 Executor task launch worker for task 1 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+03:48:35.966 Executor task launch worker for task 1 INFO FileOutputCommitter: File Output Committer Algorithm version is 2
+03:48:35.966 Executor task launch worker for task 1 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+03:48:35.971 Executor task launch worker for task 1 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+03:48:35.977 Executor task launch worker for task 1 INFO CodecConfig: Compression: SNAPPY
+03:48:35.980 Executor task launch worker for task 1 INFO CodecConfig: Compression: SNAPPY
+03:48:35.994 Executor task launch worker for task 1 INFO ParquetOutputFormat: Parquet block size to 134217728
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Parquet page size to 1048576
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Dictionary is on
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Validation is off
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Maximum row group padding size is 0 bytes
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Page size checking is: estimated
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Min row count for page size check is: 100
+03:48:35.995 Executor task launch worker for task 1 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+03:48:36.022 Executor task launch worker for task 1 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "driverId",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "name",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ssn",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "location",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "certified",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "wage_plan",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary driverId (UTF8);
+  optional binary name (UTF8);
+  optional binary ssn (UTF8);
+  optional binary location (UTF8);
+  optional binary certified (UTF8);
+  optional binary wage_plan (UTF8);
+}
+
+       
+03:48:36.055 Executor task launch worker for task 1 INFO CodecPool: Got brand-new compressor [.snappy]
+03:48:36.168 Executor task launch worker for task 1 INFO FileScanRDD: Reading File path: file:///C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/data-engineer-bootcamp-assessment-master/data-spark/drivers.csv, range: 0-2043, partition values: [empty row]
+03:48:36.182 Executor task launch worker for task 1 INFO CodeGenerator: Code generated in 10.392008 ms
+03:48:36.218 Executor task launch worker for task 1 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 2943
+03:48:36.495 Executor task launch worker for task 1 INFO FileOutputCommitter: Saved output of task 'attempt_20190910034835_0001_m_000000_0' to file:/C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/spark-warehouse/driver
+03:48:36.496 Executor task launch worker for task 1 INFO SparkHadoopMapRedUtil: attempt_20190910034835_0001_m_000000_0: Committed
+03:48:36.500 Executor task launch worker for task 1 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1608 bytes result sent to driver
+03:48:36.502 task-result-getter-1 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 589 ms on localhost (executor driver) (1/1)
+03:48:36.502 task-result-getter-1 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+03:48:36.503 dag-scheduler-event-loop INFO DAGScheduler: ResultStage 1 (saveAsTable at HiveSparkApp.scala:38) finished in 0,589 s
+03:48:36.503 ScalaTest-run-running-HiveSparkAppSuit INFO DAGScheduler: Job 1 finished: saveAsTable at HiveSparkApp.scala:38, took 0,633059 s
+03:48:36.512 ScalaTest-run-running-HiveSparkAppSuit INFO FileFormatWriter: Job null committed.
+03:48:36.535 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: select * from driver
+03:48:36.771 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Pruning directories with: 
+03:48:36.772 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Post-Scan Filters: 
+03:48:36.772 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceStrategy: Output Data Schema: struct<>
+03:48:36.773 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Pushed Filters: 
+03:48:36.850 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 14.536609 ms
+03:48:36.875 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 17.244359 ms
+03:48:36.883 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 380.3 KB, free 867.0 MB)
+03:48:36.902 ScalaTest-run-running-HiveSparkAppSuit INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 40.8 KB, free 867.0 MB)
+03:48:36.928 dispatcher-event-loop-1 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.56.1:51555 (size: 40.8 KB, free: 868.6 MB)
+03:48:36.933 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Created broadcast 5 from count at HiveSparkAppSuit.scala:28
+03:48:36.937 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 62
+03:48:36.938 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 63
+03:48:36.939 ScalaTest-run-running-HiveSparkAppSuit INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+03:48:36.976 dispatcher-event-loop-0 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.56.1:51555 in memory (size: 47.9 KB, free: 868.6 MB)
+03:48:36.991 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Starting job: count at HiveSparkAppSuit.scala:28
+03:48:36.999 dag-scheduler-event-loop INFO DAGScheduler: Registering RDD 14 (count at HiveSparkAppSuit.scala:28)
+03:48:37.000 dag-scheduler-event-loop INFO DAGScheduler: Got job 2 (count at HiveSparkAppSuit.scala:28) with 1 output partitions
+03:48:37.000 dag-scheduler-event-loop INFO DAGScheduler: Final stage: ResultStage 3 (count at HiveSparkAppSuit.scala:28)
+03:48:37.000 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+03:48:37.000 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+03:48:37.001 dag-scheduler-event-loop INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[14] at count at HiveSparkAppSuit.scala:28), which has no missing parents
+03:48:37.014 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 10.6 KB, free 867.1 MB)
+03:48:37.016 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 5.4 KB, free 867.1 MB)
+03:48:37.017 dispatcher-event-loop-1 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.56.1:51555 (size: 5.4 KB, free: 868.6 MB)
+03:48:37.018 dag-scheduler-event-loop INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+03:48:37.026 dag-scheduler-event-loop INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[14] at count at HiveSparkAppSuit.scala:28) (first 15 tasks are for partitions Vector(0))
+03:48:37.026 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+03:48:37.028 dispatcher-event-loop-3 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 5383 bytes)
+03:48:37.028 Executor task launch worker for task 2 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+03:48:37.028 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 88
+03:48:37.028 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 59
+03:48:37.075 Executor task launch worker for task 2 INFO FileScanRDD: Reading File path: file:///C:/Users/S80240/Desktop/Everis/tmp/linkit_challenge/Linkit/spark-warehouse/driver/part-00000-5c997688-40f2-4e32-b307-708b3da4af6d-c000.snappy.parquet, range: 0-3235, partition values: [empty row]
+03:48:37.142 dispatcher-event-loop-3 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.56.1:51555 in memory (size: 4.3 KB, free: 868.6 MB)
+03:48:37.143 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 60
+03:48:37.143 Spark Context Cleaner INFO ContextCleaner: Cleaned accumulator 61
+03:48:37.148 dispatcher-event-loop-1 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.56.1:51555 in memory (size: 40.4 KB, free: 868.7 MB)
+03:48:37.155 Executor task launch worker for task 2 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1679 bytes result sent to driver
+03:48:37.158 task-result-getter-2 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 132 ms on localhost (executor driver) (1/1)
+03:48:37.158 task-result-getter-2 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+03:48:37.159 dag-scheduler-event-loop INFO DAGScheduler: ShuffleMapStage 2 (count at HiveSparkAppSuit.scala:28) finished in 0,133 s
+03:48:37.160 dag-scheduler-event-loop INFO DAGScheduler: looking for newly runnable stages
+03:48:37.160 dag-scheduler-event-loop INFO DAGScheduler: running: Set()
+03:48:37.161 dag-scheduler-event-loop INFO DAGScheduler: waiting: Set(ResultStage 3)
+03:48:37.162 dag-scheduler-event-loop INFO DAGScheduler: failed: Set()
+03:48:37.166 dag-scheduler-event-loop INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[17] at count at HiveSparkAppSuit.scala:28), which has no missing parents
+03:48:37.172 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 7.0 KB, free 867.5 MB)
+03:48:37.174 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 3.7 KB, free 867.5 MB)
+03:48:37.176 dispatcher-event-loop-2 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.56.1:51555 (size: 3.7 KB, free: 868.7 MB)
+03:48:37.177 dag-scheduler-event-loop INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+03:48:37.178 dag-scheduler-event-loop INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[17] at count at HiveSparkAppSuit.scala:28) (first 15 tasks are for partitions Vector(0))
+03:48:37.178 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+03:48:37.183 dispatcher-event-loop-0 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, ANY, 4726 bytes)
+03:48:37.183 Executor task launch worker for task 3 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+03:48:37.210 Executor task launch worker for task 3 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+03:48:37.212 Executor task launch worker for task 3 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 7 ms
+03:48:37.234 Executor task launch worker for task 3 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1581 bytes result sent to driver
+03:48:37.243 task-result-getter-3 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 62 ms on localhost (executor driver) (1/1)
+03:48:37.244 task-result-getter-3 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+03:48:37.244 dag-scheduler-event-loop INFO DAGScheduler: ResultStage 3 (count at HiveSparkAppSuit.scala:28) finished in 0,063 s
+03:48:37.245 ScalaTest-run-running-HiveSparkAppSuit INFO DAGScheduler: Job 2 finished: count at HiveSparkAppSuit.scala:28, took 0,253504 s
+03:48:37.255 ScalaTest-run-running-HiveSparkAppSuit INFO HiveSparkAppSuit: 
+
+===== FINISHED com.linkit.test.HiveSparkAppSuit: 'Data insertion HiveSparkApp' =====
+
+03:48:37.275 ScalaTest-run-running-HiveSparkAppSuit INFO HiveSparkAppSuit: 
+
+===== TEST OUTPUT FOR com.linkit.test.HiveSparkAppSuit: 'Join HiveSparkApp' =====
+
+03:48:37.325 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: driver
+03:48:37.363 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: timesheet
+03:48:37.368 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: driver
+03:48:37.392 ScalaTest-run-running-HiveSparkAppSuit INFO SparkSqlParser: Parsing command: timesheet
+03:48:37.918 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 65.863116 ms
+03:48:37.955 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 16.183357 ms
+03:48:37.982 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 21.293397 ms
+03:48:38.102 ScalaTest-run-running-HiveSparkAppSuit INFO CodeGenerator: Code generated in 9.002084 ms
+03:48:38.206 ScalaTest-run-running-HiveSparkAppSuit INFO SparkContext: Starting job: count at HiveSparkAppSuit.scala:63
+03:48:38.207 dag-scheduler-event-loop INFO DAGScheduler: Registering RDD 29 (count at HiveSparkAppSuit.scala:63)
+03:48:38.207 dag-scheduler-event-loop INFO DAGScheduler: Registering RDD 24 (count at HiveSparkAppSuit.scala:63)
+03:48:38.208 dag-scheduler-event-loop INFO DAGScheduler: Registering RDD 34 (count at HiveSparkAppSuit.scala:63)
+03:48:38.208 dag-scheduler-event-loop INFO DAGScheduler: Got job 3 (count at HiveSparkAppSuit.scala:63) with 1 output partitions
+03:48:38.208 dag-scheduler-event-loop INFO DAGScheduler: Final stage: ResultStage 7 (count at HiveSparkAppSuit.scala:63)
+03:48:38.209 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+03:48:38.209 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List(ShuffleMapStage 6)
+03:48:38.210 dag-scheduler-event-loop INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[29] at count at HiveSparkAppSuit.scala:63), which has no missing parents
+03:48:38.216 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 13.6 KB, free 867.5 MB)
+03:48:38.218 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 6.6 KB, free 867.5 MB)
+03:48:38.220 dispatcher-event-loop-0 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 192.168.56.1:51555 (size: 6.6 KB, free: 868.7 MB)
+03:48:38.221 dag-scheduler-event-loop INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+03:48:38.222 dag-scheduler-event-loop INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[29] at count at HiveSparkAppSuit.scala:63) (first 15 tasks are for partitions Vector(0, 1))
+03:48:38.222 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks
+03:48:38.223 dag-scheduler-event-loop INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[24] at count at HiveSparkAppSuit.scala:63), which has no missing parents
+03:48:38.230 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 14.5 KB, free 867.5 MB)
+03:48:38.232 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 6.7 KB, free 867.5 MB)
+03:48:38.235 dispatcher-event-loop-2 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 4969 bytes)
+03:48:38.236 dispatcher-event-loop-2 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 5007 bytes)
+03:48:38.236 Executor task launch worker for task 4 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+03:48:38.237 Executor task launch worker for task 5 INFO Executor: Running task 1.0 in stage 4.0 (TID 5)
+03:48:38.253 dispatcher-event-loop-0 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 192.168.56.1:51555 (size: 6.7 KB, free: 868.7 MB)
+03:48:38.254 dag-scheduler-event-loop INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1006
+03:48:38.255 dag-scheduler-event-loop INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[24] at count at HiveSparkAppSuit.scala:63) (first 15 tasks are for partitions Vector(0, 1))
+03:48:38.255 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks
+03:48:38.313 Executor task launch worker for task 5 INFO CodeGenerator: Code generated in 10.402246 ms
+03:48:38.349 Executor task launch worker for task 5 INFO CodeGenerator: Code generated in 12.989263 ms
+03:48:38.485 Executor task launch worker for task 4 INFO CodeGenerator: Code generated in 126.888801 ms
+03:48:38.491 Executor task launch worker for task 4 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 1410 bytes result sent to driver
+03:48:38.495 Executor task launch worker for task 5 INFO Executor: Finished task 1.0 in stage 4.0 (TID 5). 1367 bytes result sent to driver
+03:48:38.496 dispatcher-event-loop-3 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 6, localhost, executor driver, partition 0, PROCESS_LOCAL, 5006 bytes)
+03:48:38.497 dispatcher-event-loop-3 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 7, localhost, executor driver, partition 1, PROCESS_LOCAL, 5073 bytes)
+03:48:38.499 task-result-getter-0 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 273 ms on localhost (executor driver) (1/2)
+03:48:38.500 task-result-getter-0 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 5) in 265 ms on localhost (executor driver) (2/2)
+03:48:38.500 task-result-getter-0 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+03:48:38.504 dag-scheduler-event-loop INFO DAGScheduler: ShuffleMapStage 4 (count at HiveSparkAppSuit.scala:63) finished in 0,280 s
+03:48:38.504 dag-scheduler-event-loop INFO DAGScheduler: looking for newly runnable stages
+03:48:38.504 dag-scheduler-event-loop INFO DAGScheduler: running: Set(ShuffleMapStage 5)
+03:48:38.504 dag-scheduler-event-loop INFO DAGScheduler: waiting: Set(ShuffleMapStage 6, ResultStage 7)
+03:48:38.504 dag-scheduler-event-loop INFO DAGScheduler: failed: Set()
+03:48:38.506 Executor task launch worker for task 6 INFO Executor: Running task 0.0 in stage 5.0 (TID 6)
+03:48:38.508 Executor task launch worker for task 7 INFO Executor: Running task 1.0 in stage 5.0 (TID 7)
+03:48:38.601 Executor task launch worker for task 6 INFO CodeGenerator: Code generated in 72.890807 ms
+03:48:38.609 Executor task launch worker for task 6 INFO Executor: Finished task 0.0 in stage 5.0 (TID 6). 1367 bytes result sent to driver
+03:48:38.614 task-result-getter-2 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 6) in 118 ms on localhost (executor driver) (1/2)
+03:48:38.618 Executor task launch worker for task 7 INFO Executor: Finished task 1.0 in stage 5.0 (TID 7). 1324 bytes result sent to driver
+03:48:38.619 task-result-getter-3 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 7) in 122 ms on localhost (executor driver) (2/2)
+03:48:38.619 task-result-getter-3 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+03:48:38.620 dag-scheduler-event-loop INFO DAGScheduler: ShuffleMapStage 5 (count at HiveSparkAppSuit.scala:63) finished in 0,365 s
+03:48:38.620 dag-scheduler-event-loop INFO DAGScheduler: looking for newly runnable stages
+03:48:38.620 dag-scheduler-event-loop INFO DAGScheduler: running: Set()
+03:48:38.620 dag-scheduler-event-loop INFO DAGScheduler: waiting: Set(ShuffleMapStage 6, ResultStage 7)
+03:48:38.620 dag-scheduler-event-loop INFO DAGScheduler: failed: Set()
+03:48:38.621 dag-scheduler-event-loop INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[34] at count at HiveSparkAppSuit.scala:63), which has no missing parents
+03:48:38.628 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 29.5 KB, free 867.5 MB)
+03:48:38.638 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 11.3 KB, free 867.5 MB)
+03:48:38.639 dispatcher-event-loop-2 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 192.168.56.1:51555 (size: 11.3 KB, free: 868.6 MB)
+03:48:38.639 dag-scheduler-event-loop INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+03:48:38.641 dag-scheduler-event-loop INFO DAGScheduler: Submitting 5 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[34] at count at HiveSparkAppSuit.scala:63) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4))
+03:48:38.641 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 6.0 with 5 tasks
+03:48:38.651 dispatcher-event-loop-0 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8, localhost, executor driver, partition 0, PROCESS_LOCAL, 5043 bytes)
+03:48:38.651 dispatcher-event-loop-0 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 9, localhost, executor driver, partition 2, PROCESS_LOCAL, 5043 bytes)
+03:48:38.651 Executor task launch worker for task 9 INFO Executor: Running task 2.0 in stage 6.0 (TID 9)
+03:48:38.651 Executor task launch worker for task 8 INFO Executor: Running task 0.0 in stage 6.0 (TID 8)
+03:48:38.657 Executor task launch worker for task 8 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.657 Executor task launch worker for task 8 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.659 Executor task launch worker for task 9 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.660 Executor task launch worker for task 9 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+03:48:38.692 Executor task launch worker for task 9 INFO CodeGenerator: Code generated in 10.976902 ms
+03:48:38.762 Executor task launch worker for task 9 INFO CodeGenerator: Code generated in 12.666312 ms
+03:48:38.778 Executor task launch worker for task 9 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.778 Executor task launch worker for task 9 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.781 Executor task launch worker for task 8 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.782 Executor task launch worker for task 8 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+03:48:38.794 Executor task launch worker for task 8 INFO Executor: Finished task 0.0 in stage 6.0 (TID 8). 3102 bytes result sent to driver
+03:48:38.797 Executor task launch worker for task 9 INFO Executor: Finished task 2.0 in stage 6.0 (TID 9). 3145 bytes result sent to driver
+03:48:38.799 dispatcher-event-loop-2 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 10, localhost, executor driver, partition 1, ANY, 5043 bytes)
+03:48:38.800 Executor task launch worker for task 10 INFO Executor: Running task 1.0 in stage 6.0 (TID 10)
+03:48:38.800 dispatcher-event-loop-2 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 11, localhost, executor driver, partition 3, ANY, 5043 bytes)
+03:48:38.801 task-result-getter-0 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 159 ms on localhost (executor driver) (1/5)
+03:48:38.804 Executor task launch worker for task 10 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+03:48:38.804 Executor task launch worker for task 10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.805 task-result-getter-0 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 9) in 151 ms on localhost (executor driver) (2/5)
+03:48:38.805 Executor task launch worker for task 11 INFO Executor: Running task 3.0 in stage 6.0 (TID 11)
+03:48:38.808 Executor task launch worker for task 10 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+03:48:38.808 Executor task launch worker for task 10 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.822 Executor task launch worker for task 11 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+03:48:38.822 Executor task launch worker for task 11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.825 Executor task launch worker for task 11 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.825 Executor task launch worker for task 11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.836 Executor task launch worker for task 11 INFO Executor: Finished task 3.0 in stage 6.0 (TID 11). 3059 bytes result sent to driver
+03:48:38.846 dispatcher-event-loop-0 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 12, localhost, executor driver, partition 4, ANY, 5043 bytes)
+03:48:38.846 task-result-getter-2 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 11) in 46 ms on localhost (executor driver) (3/5)
+03:48:38.846 Executor task launch worker for task 10 INFO Executor: Finished task 1.0 in stage 6.0 (TID 10). 3102 bytes result sent to driver
+03:48:38.847 Executor task launch worker for task 12 INFO Executor: Running task 4.0 in stage 6.0 (TID 12)
+03:48:38.852 task-result-getter-3 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 10) in 53 ms on localhost (executor driver) (4/5)
+03:48:38.852 Executor task launch worker for task 12 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks out of 2 blocks
+03:48:38.852 Executor task launch worker for task 12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.855 Executor task launch worker for task 12 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+03:48:38.855 Executor task launch worker for task 12 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+03:48:38.862 Executor task launch worker for task 12 INFO Executor: Finished task 4.0 in stage 6.0 (TID 12). 3102 bytes result sent to driver
+03:48:38.863 task-result-getter-0 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 12) in 20 ms on localhost (executor driver) (5/5)
+03:48:38.863 task-result-getter-0 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: ShuffleMapStage 6 (count at HiveSparkAppSuit.scala:63) finished in 0,222 s
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: looking for newly runnable stages
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: running: Set()
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: waiting: Set(ResultStage 7)
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: failed: Set()
+03:48:38.865 dag-scheduler-event-loop INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[37] at count at HiveSparkAppSuit.scala:63), which has no missing parents
+03:48:38.867 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 7.0 KB, free 867.5 MB)
+03:48:38.870 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 3.7 KB, free 867.5 MB)
+03:48:38.871 dispatcher-event-loop-0 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 192.168.56.1:51555 (size: 3.7 KB, free: 868.6 MB)
+03:48:38.872 dag-scheduler-event-loop INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1006
+03:48:38.872 dag-scheduler-event-loop INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[37] at count at HiveSparkAppSuit.scala:63) (first 15 tasks are for partitions Vector(0))
+03:48:38.872 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+03:48:38.873 dispatcher-event-loop-2 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 13, localhost, executor driver, partition 0, ANY, 4726 bytes)
+03:48:38.874 Executor task launch worker for task 13 INFO Executor: Running task 0.0 in stage 7.0 (TID 13)
+03:48:38.876 Executor task launch worker for task 13 INFO ShuffleBlockFetcherIterator: Getting 5 non-empty blocks out of 5 blocks
+03:48:38.876 Executor task launch worker for task 13 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+03:48:38.880 Executor task launch worker for task 13 INFO Executor: Finished task 0.0 in stage 7.0 (TID 13). 1495 bytes result sent to driver
+03:48:38.881 task-result-getter-1 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 13) in 8 ms on localhost (executor driver) (1/1)
+03:48:38.881 task-result-getter-1 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+03:48:38.882 dag-scheduler-event-loop INFO DAGScheduler: ResultStage 7 (count at HiveSparkAppSuit.scala:63) finished in 0,009 s
+03:48:38.882 ScalaTest-run-running-HiveSparkAppSuit INFO DAGScheduler: Job 3 finished: count at HiveSparkAppSuit.scala:63, took 0,675791 s
+03:48:38.885 ScalaTest-run-running-HiveSparkAppSuit INFO HiveSparkAppSuit: 
+
+===== FINISHED com.linkit.test.HiveSparkAppSuit: 'Join HiveSparkApp' =====
+
+03:48:38.921 ScalaTest-run INFO SparkSqlParser: Parsing command: !
+03:48:38.927 ScalaTest-run INFO SparkSqlParser: Parsing command: %
+03:48:38.930 ScalaTest-run INFO SparkSqlParser: Parsing command: &
+03:48:38.930 ScalaTest-run INFO SparkSqlParser: Parsing command: *
+03:48:38.931 ScalaTest-run INFO SparkSqlParser: Parsing command: +
+03:48:38.931 ScalaTest-run INFO SparkSqlParser: Parsing command: -
+03:48:38.932 ScalaTest-run INFO SparkSqlParser: Parsing command: /
+03:48:38.932 ScalaTest-run INFO SparkSqlParser: Parsing command: <
+03:48:38.932 ScalaTest-run INFO SparkSqlParser: Parsing command: <=
+03:48:38.933 ScalaTest-run INFO SparkSqlParser: Parsing command: <=>
+03:48:38.933 ScalaTest-run INFO SparkSqlParser: Parsing command: =
+03:48:38.934 ScalaTest-run INFO SparkSqlParser: Parsing command: ==
+03:48:38.934 ScalaTest-run INFO SparkSqlParser: Parsing command: >
+03:48:38.934 ScalaTest-run INFO SparkSqlParser: Parsing command: >=
+03:48:38.935 ScalaTest-run INFO SparkSqlParser: Parsing command: ^
+03:48:38.935 ScalaTest-run INFO SparkSqlParser: Parsing command: abs
+03:48:38.936 ScalaTest-run INFO SparkSqlParser: Parsing command: acos
+03:48:38.936 ScalaTest-run INFO SparkSqlParser: Parsing command: add_months
+03:48:38.936 ScalaTest-run INFO SparkSqlParser: Parsing command: and
+03:48:38.937 ScalaTest-run INFO SparkSqlParser: Parsing command: approx_count_distinct
+03:48:38.937 ScalaTest-run INFO SparkSqlParser: Parsing command: approx_percentile
+03:48:38.937 ScalaTest-run INFO SparkSqlParser: Parsing command: array
+03:48:38.938 ScalaTest-run INFO SparkSqlParser: Parsing command: array_contains
+03:48:38.938 ScalaTest-run INFO SparkSqlParser: Parsing command: ascii
+03:48:38.938 ScalaTest-run INFO SparkSqlParser: Parsing command: asin
+03:48:38.939 ScalaTest-run INFO SparkSqlParser: Parsing command: assert_true
+03:48:38.939 ScalaTest-run INFO SparkSqlParser: Parsing command: atan
+03:48:38.939 ScalaTest-run INFO SparkSqlParser: Parsing command: atan2
+03:48:38.940 ScalaTest-run INFO SparkSqlParser: Parsing command: avg
+03:48:38.940 ScalaTest-run INFO SparkSqlParser: Parsing command: base64
+03:48:38.940 ScalaTest-run INFO SparkSqlParser: Parsing command: bigint
+03:48:38.940 ScalaTest-run INFO SparkSqlParser: Parsing command: bin
+03:48:38.941 ScalaTest-run INFO SparkSqlParser: Parsing command: binary
+03:48:38.941 ScalaTest-run INFO SparkSqlParser: Parsing command: boolean
+03:48:38.941 ScalaTest-run INFO SparkSqlParser: Parsing command: bround
+03:48:38.942 ScalaTest-run INFO SparkSqlParser: Parsing command: cast
+03:48:38.942 ScalaTest-run INFO SparkSqlParser: Parsing command: cbrt
+03:48:38.943 ScalaTest-run INFO SparkSqlParser: Parsing command: ceil
+03:48:38.943 ScalaTest-run INFO SparkSqlParser: Parsing command: ceiling
+03:48:38.943 ScalaTest-run INFO SparkSqlParser: Parsing command: coalesce
+03:48:38.943 ScalaTest-run INFO SparkSqlParser: Parsing command: collect_list
+03:48:38.944 ScalaTest-run INFO SparkSqlParser: Parsing command: collect_set
+03:48:38.944 ScalaTest-run INFO SparkSqlParser: Parsing command: concat
+03:48:38.944 ScalaTest-run INFO SparkSqlParser: Parsing command: concat_ws
+03:48:38.945 ScalaTest-run INFO SparkSqlParser: Parsing command: conv
+03:48:38.945 ScalaTest-run INFO SparkSqlParser: Parsing command: corr
+03:48:38.945 ScalaTest-run INFO SparkSqlParser: Parsing command: cos
+03:48:38.945 ScalaTest-run INFO SparkSqlParser: Parsing command: cosh
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: count
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: count_min_sketch
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: covar_pop
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: covar_samp
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: crc32
+03:48:38.946 ScalaTest-run INFO SparkSqlParser: Parsing command: cube
+03:48:38.947 ScalaTest-run INFO SparkSqlParser: Parsing command: cume_dist
+03:48:38.947 ScalaTest-run INFO SparkSqlParser: Parsing command: current_database
+03:48:38.947 ScalaTest-run INFO SparkSqlParser: Parsing command: current_date
+03:48:38.947 ScalaTest-run INFO SparkSqlParser: Parsing command: current_timestamp
+03:48:38.947 ScalaTest-run INFO SparkSqlParser: Parsing command: date
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: date_add
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: date_format
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: date_sub
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: datediff
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: day
+03:48:38.948 ScalaTest-run INFO SparkSqlParser: Parsing command: dayofmonth
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: dayofyear
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: decimal
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: decode
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: degrees
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: dense_rank
+03:48:38.949 ScalaTest-run INFO SparkSqlParser: Parsing command: double
+03:48:38.950 ScalaTest-run INFO SparkSqlParser: Parsing command: e
+03:48:38.950 ScalaTest-run INFO SparkSqlParser: Parsing command: elt
+03:48:38.950 ScalaTest-run INFO SparkSqlParser: Parsing command: encode
+03:48:38.950 ScalaTest-run INFO SparkSqlParser: Parsing command: exp
+03:48:38.950 ScalaTest-run INFO SparkSqlParser: Parsing command: explode
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: explode_outer
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: expm1
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: factorial
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: find_in_set
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: first
+03:48:38.951 ScalaTest-run INFO SparkSqlParser: Parsing command: first_value
+03:48:38.952 ScalaTest-run INFO SparkSqlParser: Parsing command: float
+03:48:38.952 ScalaTest-run INFO SparkSqlParser: Parsing command: floor
+03:48:38.952 ScalaTest-run INFO SparkSqlParser: Parsing command: format_number
+03:48:38.952 ScalaTest-run INFO SparkSqlParser: Parsing command: format_string
+03:48:38.952 ScalaTest-run INFO SparkSqlParser: Parsing command: from_json
+03:48:38.953 ScalaTest-run INFO SparkSqlParser: Parsing command: from_unixtime
+03:48:38.953 ScalaTest-run INFO SparkSqlParser: Parsing command: from_utc_timestamp
+03:48:38.953 ScalaTest-run INFO SparkSqlParser: Parsing command: get_json_object
+03:48:38.953 ScalaTest-run INFO SparkSqlParser: Parsing command: greatest
+03:48:38.953 ScalaTest-run INFO SparkSqlParser: Parsing command: grouping
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: grouping_id
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: hash
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: hex
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: hour
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: hypot
+03:48:38.954 ScalaTest-run INFO SparkSqlParser: Parsing command: if
+03:48:38.955 ScalaTest-run INFO SparkSqlParser: Parsing command: ifnull
+03:48:38.955 ScalaTest-run INFO SparkSqlParser: Parsing command: in
+03:48:38.955 ScalaTest-run INFO SparkSqlParser: Parsing command: initcap
+03:48:38.955 ScalaTest-run INFO SparkSqlParser: Parsing command: inline
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: inline_outer
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: input_file_block_length
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: input_file_block_start
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: input_file_name
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: instr
+03:48:38.956 ScalaTest-run INFO SparkSqlParser: Parsing command: int
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: isnan
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: isnotnull
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: isnull
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: java_method
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: json_tuple
+03:48:38.957 ScalaTest-run INFO SparkSqlParser: Parsing command: kurtosis
+03:48:38.958 ScalaTest-run INFO SparkSqlParser: Parsing command: lag
+03:48:38.958 ScalaTest-run INFO SparkSqlParser: Parsing command: last
+03:48:38.959 ScalaTest-run INFO SparkSqlParser: Parsing command: last_day
+03:48:38.959 ScalaTest-run INFO SparkSqlParser: Parsing command: last_value
+03:48:38.959 ScalaTest-run INFO SparkSqlParser: Parsing command: lcase
+03:48:38.959 ScalaTest-run INFO SparkSqlParser: Parsing command: lead
+03:48:38.959 ScalaTest-run INFO SparkSqlParser: Parsing command: least
+03:48:38.960 ScalaTest-run INFO SparkSqlParser: Parsing command: length
+03:48:38.960 ScalaTest-run INFO SparkSqlParser: Parsing command: levenshtein
+03:48:38.960 ScalaTest-run INFO SparkSqlParser: Parsing command: like
+03:48:38.961 ScalaTest-run INFO SparkSqlParser: Parsing command: ln
+03:48:38.961 ScalaTest-run INFO SparkSqlParser: Parsing command: locate
+03:48:38.961 ScalaTest-run INFO SparkSqlParser: Parsing command: log
+03:48:38.961 ScalaTest-run INFO SparkSqlParser: Parsing command: log10
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: log1p
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: log2
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: lower
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: lpad
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: ltrim
+03:48:38.962 ScalaTest-run INFO SparkSqlParser: Parsing command: map
+03:48:38.963 ScalaTest-run INFO SparkSqlParser: Parsing command: map_keys
+03:48:38.963 ScalaTest-run INFO SparkSqlParser: Parsing command: map_values
+03:48:38.963 ScalaTest-run INFO SparkSqlParser: Parsing command: max
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: md5
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: mean
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: min
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: minute
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: monotonically_increasing_id
+03:48:38.964 ScalaTest-run INFO SparkSqlParser: Parsing command: month
+03:48:38.965 ScalaTest-run INFO SparkSqlParser: Parsing command: months_between
+03:48:38.965 ScalaTest-run INFO SparkSqlParser: Parsing command: named_struct
+03:48:38.965 ScalaTest-run INFO SparkSqlParser: Parsing command: nanvl
+03:48:38.965 ScalaTest-run INFO SparkSqlParser: Parsing command: negative
+03:48:38.965 ScalaTest-run INFO SparkSqlParser: Parsing command: next_day
+03:48:38.966 ScalaTest-run INFO SparkSqlParser: Parsing command: not
+03:48:38.966 ScalaTest-run INFO SparkSqlParser: Parsing command: now
+03:48:38.966 ScalaTest-run INFO SparkSqlParser: Parsing command: ntile
+03:48:38.966 ScalaTest-run INFO SparkSqlParser: Parsing command: nullif
+03:48:38.966 ScalaTest-run INFO SparkSqlParser: Parsing command: nvl
+03:48:38.967 ScalaTest-run INFO SparkSqlParser: Parsing command: nvl2
+03:48:38.967 ScalaTest-run INFO SparkSqlParser: Parsing command: or
+03:48:38.967 ScalaTest-run INFO SparkSqlParser: Parsing command: parse_url
+03:48:38.967 ScalaTest-run INFO SparkSqlParser: Parsing command: percent_rank
+03:48:38.968 ScalaTest-run INFO SparkSqlParser: Parsing command: percentile
+03:48:38.968 ScalaTest-run INFO SparkSqlParser: Parsing command: percentile_approx
+03:48:38.968 ScalaTest-run INFO SparkSqlParser: Parsing command: pi
+03:48:38.968 ScalaTest-run INFO SparkSqlParser: Parsing command: pmod
+03:48:38.968 ScalaTest-run INFO SparkSqlParser: Parsing command: posexplode
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: posexplode_outer
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: positive
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: pow
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: power
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: printf
+03:48:38.969 ScalaTest-run INFO SparkSqlParser: Parsing command: quarter
+03:48:38.970 ScalaTest-run INFO SparkSqlParser: Parsing command: radians
+03:48:38.970 ScalaTest-run INFO SparkSqlParser: Parsing command: rand
+03:48:38.970 ScalaTest-run INFO SparkSqlParser: Parsing command: randn
+03:48:38.970 ScalaTest-run INFO SparkSqlParser: Parsing command: rank
+03:48:38.970 ScalaTest-run INFO SparkSqlParser: Parsing command: reflect
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: regexp_extract
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: regexp_replace
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: repeat
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: reverse
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: rint
+03:48:38.971 ScalaTest-run INFO SparkSqlParser: Parsing command: rlike
+03:48:38.972 ScalaTest-run INFO SparkSqlParser: Parsing command: rollup
+03:48:38.972 ScalaTest-run INFO SparkSqlParser: Parsing command: round
+03:48:38.972 ScalaTest-run INFO SparkSqlParser: Parsing command: row_number
+03:48:38.972 ScalaTest-run INFO SparkSqlParser: Parsing command: rpad
+03:48:38.972 ScalaTest-run INFO SparkSqlParser: Parsing command: rtrim
+03:48:38.973 ScalaTest-run INFO SparkSqlParser: Parsing command: second
+03:48:38.973 ScalaTest-run INFO SparkSqlParser: Parsing command: sentences
+03:48:38.973 ScalaTest-run INFO SparkSqlParser: Parsing command: sha
+03:48:38.974 ScalaTest-run INFO SparkSqlParser: Parsing command: sha1
+03:48:38.974 ScalaTest-run INFO SparkSqlParser: Parsing command: sha2
+03:48:38.974 ScalaTest-run INFO SparkSqlParser: Parsing command: shiftleft
+03:48:38.974 ScalaTest-run INFO SparkSqlParser: Parsing command: shiftright
+03:48:38.974 ScalaTest-run INFO SparkSqlParser: Parsing command: shiftrightunsigned
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: sign
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: signum
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: sin
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: sinh
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: size
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: skewness
+03:48:38.975 ScalaTest-run INFO SparkSqlParser: Parsing command: smallint
+03:48:38.976 ScalaTest-run INFO SparkSqlParser: Parsing command: sort_array
+03:48:38.976 ScalaTest-run INFO SparkSqlParser: Parsing command: soundex
+03:48:38.976 ScalaTest-run INFO SparkSqlParser: Parsing command: space
+03:48:38.976 ScalaTest-run INFO SparkSqlParser: Parsing command: spark_partition_id
+03:48:38.976 ScalaTest-run INFO SparkSqlParser: Parsing command: split
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: sqrt
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: stack
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: std
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: stddev
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: stddev_pop
+03:48:38.977 ScalaTest-run INFO SparkSqlParser: Parsing command: stddev_samp
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: str_to_map
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: string
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: struct
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: substr
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: substring
+03:48:38.978 ScalaTest-run INFO SparkSqlParser: Parsing command: substring_index
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: sum
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: tan
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: tanh
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: timestamp
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: tinyint
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: to_date
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: to_json
+03:48:38.979 ScalaTest-run INFO SparkSqlParser: Parsing command: to_timestamp
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: to_unix_timestamp
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: to_utc_timestamp
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: translate
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: trim
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: trunc
+03:48:38.980 ScalaTest-run INFO SparkSqlParser: Parsing command: ucase
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: unbase64
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: unhex
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: unix_timestamp
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: upper
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: var_pop
+03:48:38.981 ScalaTest-run INFO SparkSqlParser: Parsing command: var_samp
+03:48:38.982 ScalaTest-run INFO SparkSqlParser: Parsing command: variance
+03:48:38.982 ScalaTest-run INFO SparkSqlParser: Parsing command: weekofyear
+03:48:38.982 ScalaTest-run INFO SparkSqlParser: Parsing command: when
+03:48:38.982 ScalaTest-run INFO SparkSqlParser: Parsing command: window
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_boolean
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_double
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_float
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_int
+03:48:38.983 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_long
+03:48:38.984 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_number
+03:48:38.984 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_short
+03:48:38.984 ScalaTest-run INFO SparkSqlParser: Parsing command: xpath_string
+03:48:38.984 ScalaTest-run INFO SparkSqlParser: Parsing command: year
+03:48:38.984 ScalaTest-run INFO SparkSqlParser: Parsing command: |
+03:48:38.985 ScalaTest-run INFO SparkSqlParser: Parsing command: ~
+03:48:39.005 ScalaTest-run INFO AbstractConnector: Stopped Spark@72ce442b{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+03:48:39.009 ScalaTest-run INFO SparkUI: Stopped Spark web UI at http://192.168.56.1:4040
+03:48:39.023 dispatcher-event-loop-2 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+03:48:39.063 ScalaTest-run INFO MemoryStore: MemoryStore cleared
+03:48:39.064 ScalaTest-run INFO BlockManager: BlockManager stopped
+03:48:39.066 ScalaTest-run INFO BlockManagerMaster: BlockManagerMaster stopped
+03:48:39.069 dispatcher-event-loop-1 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+03:48:39.072 ScalaTest-run INFO SparkContext: Successfully stopped SparkContext
+03:48:39.083 shutdown-hook-0 INFO ShutdownHookManager: Shutdown hook called
+03:48:39.084 shutdown-hook-0 INFO ShutdownHookManager: Deleting directory C:\Users\S80240\AppData\Local\Temp\spark-f1a5cd11-9701-4e06-819f-dbdefb7fca9c

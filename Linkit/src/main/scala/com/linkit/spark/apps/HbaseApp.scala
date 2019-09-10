@@ -1,12 +1,12 @@
 package com.linkit.spark.apps
 
 import com.linkit.spark.utils.{SparkSessionBuilder, Utils}
-import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.execution.datasources.hbase.HBaseTableCatalog
 import org.apache.spark.sql.functions._
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
-class HbaseApp extends SparkSessionBuilder {
-  val spark = buildSparkSession
+class HbaseApp  {
+  var spark:SparkSession = null
 
   def withCatalog(cat: String): DataFrame = {
     spark
@@ -51,14 +51,15 @@ class HbaseApp extends SparkSessionBuilder {
   def getEventsWithRoute(origDest:String,catalog:String) {
     val df = withCatalog(catalog)
       .filter(col("routeName")
-      .contains(origDest))
-    println(df.collect())
+        .contains(origDest))
+    df.show(false)
   }
 
 }
 
-object HbaseApp extends App{
+object HbaseApp extends SparkSessionBuilder with App{
   val hbaseApp = new HbaseApp()
+  hbaseApp.spark = buildSparkSession
   def catalog = s"""{
                    |"table":{"namespace":"default", "name":"dangerous_driving"},
                    |"rowkey":"eventId",
