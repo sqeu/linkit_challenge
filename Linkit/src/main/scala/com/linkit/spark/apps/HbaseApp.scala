@@ -63,19 +63,19 @@ object HbaseApp extends SparkSessionBuilder with App{
   def catalog = s"""{
                    |"table":{"namespace":"default", "name":"dangerous_driving"},
                    |"rowkey":"eventId",
-                   ||"columns":{
-                   ||"eventId":{"cf":"rowkey","col":"eventId","type":"string"},
-                   ||"driverId":{"cf":"driver","col":"driverId","type":"string"},
-                   ||"driverName":{"cf":"driver","col":"driverName","type":"string"},
-                   ||"eventTime":{"cf":"event","col":"eventTime","type":"string"},
-                   ||"eventType":{"cf":"event","col":"eventType","type":"string"},
-                   ||"latitudeColumn":{"cf":"event","col":"latitudeColumn","type":"string"},
-                   ||"longitudeColumn":{"cf":"event","col":"longitudeColumn","type":"string"},
-                   ||"routeId":{"cf":"route","col":"routeId","type":"string"},
-                   ||"routeName":{"cf":"route","col":"routeName","type":"string"},
-                   ||"truckId":{"cf":"truck","col":"truckId","type":"string"}
-                   ||}
-                   ||}""".stripMargin
+                   |"columns":{
+                   |"eventId":{"cf":"rowkey","col":"eventId","type":"string"},
+                   |"driverId":{"cf":"driver","col":"driverId","type":"string"},
+                   |"driverName":{"cf":"driver","col":"driverName","type":"string"},
+                   |"eventTime":{"cf":"event","col":"eventTime","type":"string"},
+                   |"eventType":{"cf":"event","col":"eventType","type":"string"},
+                   |"latitudeColumn":{"cf":"event","col":"latitudeColumn","type":"string"},
+                   |"longitudeColumn":{"cf":"event","col":"longitudeColumn","type":"string"},
+                   |"routeId":{"cf":"route","col":"routeId","type":"string"},
+                   |"routeName":{"cf":"route","col":"routeName","type":"string"},
+                   |"truckId":{"cf":"truck","col":"truckId","type":"string"}
+                   |}
+                   |}""".stripMargin
 
   val hdfs_data = "/workspace/"
   val hbase_data = hdfs_data+"data-hbase/"

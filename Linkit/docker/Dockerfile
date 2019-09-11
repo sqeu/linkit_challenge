@@ -52,11 +52,10 @@ WORKDIR /root
 # Spark worker web UI on 8081.
 EXPOSE 4040 8080 8081 9083 10016 16010 16000 16030 16020 2181 18081
 
-#Hive y hbase, mas puertos?
 COPY config $SPARK_HOME/conf
 COPY data  /workspace
 
 COPY jar app
 COPY scripts .
- 
-CMD ["/bin/bash","init-services.sh"]
+RUN chmod 755 /root/init-services.sh
+ENTRYPOINT ["/bin/bash","/root/init-services.sh"]

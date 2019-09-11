@@ -11,6 +11,7 @@ manejar -, en nombre de columnas
 
 spark-submit --class HiveSpark --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
 spark-submit --class Example --master local --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar ./spark1_2.11-0.1.jar
+spark-submit --class com.linkit.spark.apps.HiveSparkApp  app/spark1_2.11-0.1.jar
 
 spark-shell --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar --conf "spark.sql.hive.hiveserver2.jdbc.url=jdbc:hive2://sandbox-hdp.hortonworks.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;user=hive" --conf "spark.datasource.hive.warehouse.metastoreUri=thrift://sandbox-hdp.hortonworks.com:9083" --conf "spark.hadoop.hive.llap.daemon.service.hosts=@llap0" --conf "spark.hadoop.hive.zookeeper.quorum=sandbox-hdp.hortonworks.com:2181"
 
@@ -33,7 +34,7 @@ export SPARK_CLASSPATH=/usr/hdp/current/hbase-client/lib/hbase-common.jar:/usr/h
 spark-shell --master yarn --deploy-mode client --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 --files /etc/hbase/conf/hbase-site.xml
 spark-shell  --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 
 
-spark-submit --class HbaseApp --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 ./spark1_2.11-0.1.jar
+spark-submit --class com.linkit.spark.apps.HbaseApp --repositories http://repo.hortonworks.com/content/groups/public/ --packages com.hortonworks:shc-core:1.1.1-2.1-s_2.11 app/spark1_2.11-0.2.jar
 
 anadir rowkey incremente, no tienen implementado eso y seria mala idea, porq en concurrencia crearia bottleneck al tratar de escribir en la misma region
 
@@ -41,3 +42,40 @@ spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apa
 
 docker build -t linkitspark .
 docker run --rm -it -p 4040:4040 -p 8080:8080 -p 8081:8081 -p 2181:2181 -p 9083:9083 -p 10016:10016 -p 16010:16010 -p 16000:16000 -p 16020:16020 -p 16030:16030 -p 18081:18081 --add-host=sandbox-hdp.hortonworks.com:192.168.99.1 linkitspark /bin/bash
+docker run --rm -it --network cda --add-host=sandbox-hdp.hortonworks.com:172.18.0.3 linkitspark /bin/bash
+
+mkdir -p /usr/hdp/3.0.1.0-187/hadoop/lib/
+mkdir -p /usr/hdp/current/spark2-client/standalone-metastore
+
+docker run --rm -it --network cda --add-host=sandbox-hdp.hortonworks.com:172.18.0.3 linkitspark /bin/bash
+------------------------------------------------------
+spark.driver.extraLibraryPath /usr/hdp/current/hadoop-client/lib/native:/usr/hdp/
+spark.eventLog.dir hdfs:///spark2-history/
+spark.eventLog.enabled true
+spark.executor.extraJavaOptions -XX:+UseNUMA
+spark.executor.extraLibraryPath /usr/hdp/current/hadoop-client/lib/native:/usr/hd
+spark.history.fs.cleaner.enabled true
+spark.history.fs.cleaner.interval 7d
+spark.history.fs.cleaner.maxAge 90d
+spark.history.fs.logDirectory hdfs:///spark2-history/
+spark.history.kerberos.keytab none
+spark.history.kerberos.principal none
+spark.history.provider org.apache.spark.deploy.history.FsHistoryProvider
+spark.history.ui.port 18081
+spark.io.compression.lz4.blockSize 128kb
+spark.master yarn
+spark.shuffle.file.buffer 1m
+spark.shuffle.io.backLog 8192
+spark.shuffle.io.serverThreads 128
+spark.shuffle.unsafe.file.output.buffer 5m
+spark.sql.autoBroadcastJoinThreshold 26214400
+spark.sql.hive.convertMetastoreOrc true
+spark.sql.hive.metastore.jars /usr/hdp/current/spark2-client/standalone-metastore
+spark.sql.hive.metastore.version 3.0
+spark.sql.orc.filterPushdown true
+spark.sql.orc.impl native
+spark.sql.statistics.fallBackToHdfs true
+spark.sql.warehouse.dir /apps/spark/warehouse
+spark.unsafe.sorter.spill.reader.buffer.size 1m
+spark.yarn.historyServer.address sandbox-hdp.hortonworks.com:18081
+spark.yarn.queue default
