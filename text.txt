@@ -39,3 +39,5 @@ anadir rowkey incremente, no tienen implementado eso y seria mala idea, porq en 
 
 spark.read.options(Map(HBaseTableCatalog.tableCatalog->catalog)).format("org.apache.spark.sql.execution.datasources.hbase").load()
 
+docker build -t linkitspark .
+docker run --rm -it -p 4040:4040 -p 8080:8080 -p 8081:8081 -p 2181:2181 -p 9083:9083 -p 10016:10016 -p 16010:16010 -p 16000:16000 -p 16020:16020 -p 16030:16030 -p 18081:18081 --add-host=sandbox-hdp.hortonworks.com:192.168.99.1 linkitspark /bin/bash
