@@ -80,13 +80,18 @@ object HbaseApp extends SparkSessionBuilder with App{
   val hdfs_data = "/workspace/"
   val hbase_data = hdfs_data+"data-hbase/"
   val sourcePath = "/workspace/data-hbase/"
-
+  
+  println("Putting files into HDFS")
   val utils = new Utils()
   utils.putHDFS(sourcePath,hdfs_data)
-
+  
+  println("Load dangerous driver")
   hbaseApp.loadDangerousDriver(hbase_data+"dangerous-driver.csv",catalog)
+  println("Load extra driver")
   hbaseApp.loadExtraDriver(hbase_data+"extra-driver.csv",catalog)
+  println("Updating route")
   hbaseApp.updateRoute("4","Los Angeles to Santa Clara",catalog)
+  println("Getting event")
   hbaseApp.getEventsWithRoute("Los Angeles",catalog)
 
 }

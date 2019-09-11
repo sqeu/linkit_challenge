@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Spark1
+Implementation-Version: 0.1
+Specification-Vendor: spark1
+Specification-Title: Spark1
+Implementation-Vendor-Id: spark1
+Specification-Version: 0.1
+Implementation-Vendor: spark1
+

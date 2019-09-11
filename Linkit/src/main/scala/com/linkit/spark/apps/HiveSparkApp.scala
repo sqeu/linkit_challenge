@@ -70,13 +70,19 @@ object HiveSparkApp extends SparkSessionBuilder with App{
   val spark_data = hdfs_data+"data-spark/"
   val sourcePath = "/workspace/data-spark/"
 
+  println("Putting files into HDFS")
   val utils = new Utils()
   utils.putHDFS(sourcePath,hdfs_data)
 
+  println("Creating tables")
   example.createTables()
+  println("Inserting timesheet")
   example.insertData(spark_data+"drivers.csv","linkit.driver")
+  println("Inserting timesheet")
   example.insertData(spark_data+"timesheet.csv","linkit.timesheet")
+  println("Inserting truck events")
   example.insertData(spark_data+"truck_event_text_partition.csv","linkit.truck_event_text_partition")
+  println("Joining drivers and timesheet")
   example.join("linkit.driver","linkit.timesheet").show(false)
-  //.write.csv("/tmp/shakespeareWordCount")
+  
 }

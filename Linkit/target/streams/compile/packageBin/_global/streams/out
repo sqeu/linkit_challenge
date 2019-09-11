@@ -1,1 +1,33 @@
-[debug] Jar uptodate: C:\Users\S80240\Desktop\Everis\linkit_challenge\Linkit\target\scala-2.11\spark1_2.11-0.1.jar
+[debug] Packaging C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\spark1_2.11-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes
+[debug] 	com
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com
+[debug] 	com\linkit
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit
+[debug] 	com\linkit\spark
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark
+[debug] 	com\linkit\spark\apps
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps
+[debug] 	com\linkit\spark\apps\HbaseApp$.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HbaseApp$.class
+[debug] 	com\linkit\spark\apps\HbaseApp$delayedInit$body.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HbaseApp$delayedInit$body.class
+[debug] 	com\linkit\spark\apps\HbaseApp.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HbaseApp.class
+[debug] 	com\linkit\spark\apps\HiveSparkApp$$anonfun$insertData$1.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HiveSparkApp$$anonfun$insertData$1.class
+[debug] 	com\linkit\spark\apps\HiveSparkApp$.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HiveSparkApp$.class
+[debug] 	com\linkit\spark\apps\HiveSparkApp$delayedInit$body.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HiveSparkApp$delayedInit$body.class
+[debug] 	com\linkit\spark\apps\HiveSparkApp.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\apps\HiveSparkApp.class
+[debug] 	com\linkit\spark\utils
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\utils
+[debug] 	com\linkit\spark\utils\SparkSessionBuilder.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\utils\SparkSessionBuilder.class
+[debug] 	com\linkit\spark\utils\Utils.class
+[debug] 	  C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\target\scala-2.11\classes\com\linkit\spark\utils\Utils.class
+[debug] Done packaging.
