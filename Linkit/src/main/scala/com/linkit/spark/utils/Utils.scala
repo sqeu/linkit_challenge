@@ -8,7 +8,6 @@ import org.apache.hadoop.ipc.RemoteException
 
 class Utils {
   def putHDFS(sourcePath:String,destinationPath:String){
-    //http://blog.rajeevsharma.in/2009/06/using-hdfs-in-java-0200.html
     val conf = new Configuration()
     try{
       val hdfs = FileSystem.get(new URI("hdfs://sandbox-hdp.hortonworks.com:8020"),conf)

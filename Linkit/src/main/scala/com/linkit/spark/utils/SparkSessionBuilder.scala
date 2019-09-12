@@ -18,8 +18,6 @@ class SparkSessionBuilder extends Serializable {
       .config(conf)
       .getOrCreate()
 
-
-
     spark
   }
 }

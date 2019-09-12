@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.apache.hadoop:hadoop-mapreduce-client-core:3.1.1.3.1.0.6-1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo.hortonworks.com/content/repositories/releases/org/apache/hadoop/hadoop-mapreduce-client-core/3.1.1.3.1.0.6-1/hadoop-mapreduce-client-core-3.1.1.3.1.0.6-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo.hortonworks.com/content/repositories/releases/org/apache/hadoop/hadoop-mapreduce-client-core/3.1.1.3.1.0.6-1/hadoop-mapreduce-client-core-3.1.1.3.1.0.6-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

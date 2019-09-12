@@ -1,17 +1,14 @@
 package com.linkit.spark.apps
 
-import com.hortonworks.hwc.HiveWarehouseSession
 import com.linkit.spark.utils.{SparkSessionBuilder, Utils}
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 
 class HiveSparkApp {
   var spark: SparkSession = null
-  //@transient lazy val hive = HiveWarehouseSession.session(spark).build()
   def createTables() {
-   spark.sql("create database if not exists linkit")
-    //hive.createDatabase("linkit",true)
-spark.sql(
+    spark.sql("create database if not exists linkit")
+    spark.sql(
       s"""create external table if not exists linkit.driver (
          |driverId string,name string,ssn string,location string,certified string,wage_plan string)
          |stored as parquet
@@ -40,7 +37,6 @@ spark.sql(
     }
     df.write.format("parquet").mode(SaveMode.Append)
       .save("/data/"+tableName)
-    //hive.execute("msck repair table linkit."+tableName)
   }
 
   def join(driverTable: String, timesheetTable: String): DataFrame = {
@@ -64,12 +60,8 @@ object HiveSparkApp extends SparkSessionBuilder with App{
 
   println("Creating tables")
   app.createTables()
-  println("Inserting timesheet")
 
-	app.insertData(sourcePath +"timesheet.csv","timesheet")
-hive.executeQuery("select driverId, name from linkit.driver")
-spark.sql("select driverId, name from linkit.driver").show()
-hive.execute("msck repair table linkit.driver")
+  println("Inserting drivers")
   app.insertData(spark_data+"drivers.csv","linkit.driver")
   println("Inserting timesheet")
   app.insertData(spark_data+"timesheet.csv","linkit.timesheet")
