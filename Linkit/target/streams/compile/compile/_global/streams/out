@@ -1,15 +1,2 @@
 [debug] Acquiring lock on file C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\project\target\.sbt-compilation-infos\linkit-compile\.sbt-idea-lock ...
-[error] C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\src\main\scala\com\linkit\spark\apps\HiveCatalogApp.scala:3:12: object hortonworks is not a member of package com
-[error] import com.hortonworks.hwc.HiveWarehouseSession
-[error]            ^
-[error] C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\src\main\scala\com\linkit\spark\apps\HiveCatalogApp.scala:10:30: not found: value HiveWarehouseSession
-[error]   @transient lazy val hive = HiveWarehouseSession.session(spark).build()
-[error]                              ^
-[error] C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\src\main\scala\com\linkit\spark\apps\HiveSparkApp.scala:3:12: object hortonworks is not a member of package com
-[error] import com.hortonworks.hwc.HiveWarehouseSession
-[error]            ^
-[error] C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\src\main\scala\com\linkit\spark\apps\HiveSparkApp.scala:10:30: not found: value HiveWarehouseSession
-[error]   @transient lazy val hive = HiveWarehouseSession.session(spark).build()
-[error]                              ^
-[error] four errors found
 [debug] Releasing lock on file C:\Users\S80240\Desktop\Everis\tmp\linkit_challenge\Linkit\project\target\.sbt-compilation-infos\linkit-compile\.sbt-idea-lock.
