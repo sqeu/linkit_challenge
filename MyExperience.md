@@ -19,7 +19,7 @@ I wrote the code on this section and the following ones keeping in mind that I w
     - The schema I created has slightly different names than the headers in the csv, the main change is that instead of using "-" I used "_", I did this because Spark fails to parse the column names. It might think you are trying to do a math operation. I had two options, either escaping the columns with a backtick "`" and change my schema or change the name of the fields after reading it with Spark. I chose the latter because in the future it would be much easier to use than trying to figure out that you need to use backticks.
 - Outputting the final dataframe was the most straightforward step, just an inner join. However, since this part of the challenge required me to read from Hive, I would have had problems connecting to Hive since I didn't have LLAP, more on this in next point.
 - Spark connection with Hive
-    - At first I had issues trying to see my results in Hive, I spent a quite some time trying to debug why my table was not showing in Hive and why the last dataframe was increasing in rows and duplicating them. This didn't happend to me before at clients. Then I found [this] (https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_hivewarehousesession_api_operations.html). So actually my table and data are not really in Hive, they are actually in the Spark catalog. 
+    - At first I had issues trying to see my results in Hive, I spent a quite some time trying to debug why my table was not showing in Hive and why the last dataframe was increasing in rows and duplicating them. This didn't happend to me before at clients. Then I found [this](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_hivewarehousesession_api_operations.html). So actually my table and data are not really in Hive, they are actually in the Spark catalog. 
     - With that in mind, I tried the Hive Warehouse Connector (HWC) so I could use Spark with the Hive catalog, however if I had used it entirely I wouldn't have been able to read the table because I didn't have LLAP (low-latency analytical processing) set-up. Therefore, having an external table was more convenient.
     - By the way, I had issues trying to connect to Hive through the HWC, I blame this on the documentation since it didn't specify that I needed to add a users to the jdbc string they tell you to use.
     - I ended up changing the metastore.catalog.default to hive from the hive-site.xml. Only then spark was able to read from the hive catalog easily.
@@ -45,7 +45,7 @@ I wrote the code on this section and the following ones keeping in mind that I w
 
 ## Extras
 - Writing unit tests
-    - I liked this part because before this challenge I didn't know how to write unit tests for Spark and Scala. I saw [https://www.youtube.com/watch?v=4U9Me6shpno](Ted Malaska's conference) on this topic, it was pretty insightful.
+    - I liked this part because before this challenge I didn't know how to write unit tests for Spark and Scala. I saw [Ted Malaska's conference](https://www.youtube.com/watch?v=4U9Me6shpno) on this topic, it was pretty insightful.
     - While writing the tests I noticed that there had to be some minor changes in my code, so actually is really nice to learn that you have to have one more thing in mind when coding. 
     
 - Containerized app
