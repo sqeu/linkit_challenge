@@ -1,4 +1,4 @@
-#My experience and further notes
+# My experience and further notes
 
 ## HDP Sandbox
 
@@ -55,6 +55,6 @@ I wrote the code on this section and the following ones keeping in mind that I w
     - I managed to get the application to work with the HDFS, HBase from the HDP Sandbox, however I couldn't manage to connect to the Hive metastore from the container, I suspect is because of a library or even the spark version.
     - I used as a base the dockerfile from p7hb/docker-spark, modified it by adding the necessary commands and files.
 
-##Final comments
+## Final comments
 
 - I learned a lot from this challenge, especially about connectors and connections from another environment. I used to take for granted the connections with HDFS and Hive becuase when I go to clients they usually have everything ready to use. Also, they have older versions of their components, so it took me by surprise about that change on the default catalog that Spark uses.
