@@ -7,26 +7,27 @@ import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
 
 class HiveSparkApp {
   var spark: SparkSession = null
-  @transient lazy val hive = HiveWarehouseSession.session(spark).build()
+  //@transient lazy val hive = HiveWarehouseSession.session(spark).build()
   def createTables() {
-    //spark.sql("create database if not exists linkit")
-    hive.createDatabase("linkit",true)
-    hive.executeUpdate(
+   spark.sql("create database if not exists linkit")
+    //hive.createDatabase("linkit",true)
+spark.sql(
       s"""create external table if not exists linkit.driver (
-         |driverId string,name string,ssn string,location string,certified string,wage_plan string,load_date date)
+         |driverId string,name string,ssn string,location string,certified string,wage_plan string)
          |stored as parquet
-         |location /data/driver""".stripMargin)
-    hive.executeUpdate(
+         |location '/data/driver'""".stripMargin)
+
+    spark.sql(
       s"""create external table if not exists linkit.timesheet (
-         |driverId string,week string,hours_logged string,miles_logged string,load_date date)
+         |driverId string,week string,hours_logged string,miles_logged string)
          |stored as parquet
-         |location /data/timesheet""".stripMargin)
-    hive.executeUpdate(
+         |location '/data/timesheet'""".stripMargin)
+    spark.sql(
       s"""create table if not exists linkit.truck_event_text_partition (
          |driverId string,truckId string,eventTime string,eventType string,longitude string,latitude string,eventKey string
-         |,CorrelationId string,driverName string,routeId string,routeName string,eventDate string,load_date date)
+         |,CorrelationId string,driverName string,routeId string,routeName string,eventDate string)
          |stored as parquet
-         |location /data/truck_event_text_partition""".stripMargin)
+         |location '/data/truck_event_text_partition'""".stripMargin)
   }
 
   def insertData(filePath: String, tableName: String) {
@@ -37,12 +38,9 @@ class HiveSparkApp {
         df = df.withColumnRenamed(column, column.replace("-", "_"))
       }
     }
-
-    df.withColumn("load_date",current_date())
-      .write.format("parquet").mode(SaveMode.Overwrite)
-      .save("/data/"+tableName+"/"+java.time.LocalDate.now)
-
-    hive.execute("msck repair table linkit."+tableName)
+    df.write.format("parquet").mode(SaveMode.Append)
+      .save("/data/"+tableName)
+    //hive.execute("msck repair table linkit."+tableName)
   }
 
   def join(driverTable: String, timesheetTable: String): DataFrame = {
@@ -67,6 +65,11 @@ object HiveSparkApp extends SparkSessionBuilder with App{
   println("Creating tables")
   app.createTables()
   println("Inserting timesheet")
+
+	app.insertData(sourcePath +"timesheet.csv","timesheet")
+hive.executeQuery("select driverId, name from linkit.driver")
+spark.sql("select driverId, name from linkit.driver").show()
+hive.execute("msck repair table linkit.driver")
   app.insertData(spark_data+"drivers.csv","linkit.driver")
   println("Inserting timesheet")
   app.insertData(spark_data+"timesheet.csv","linkit.timesheet")

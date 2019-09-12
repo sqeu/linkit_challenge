@@ -15,6 +15,10 @@ spark-submit --class com.linkit.spark.apps.HiveSparkApp  app/spark1_2.11-0.1.jar
 
 spark-shell --jars /usr/hdp/current/hive_warehouse_connector/hive-warehouse-connector-assembly-1.0.0.3.0.1.0-187.jar --conf "spark.sql.hive.hiveserver2.jdbc.url=jdbc:hive2://sandbox-hdp.hortonworks.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;user=hive" --conf "spark.datasource.hive.warehouse.metastoreUri=thrift://sandbox-hdp.hortonworks.com:9083" --conf "spark.hadoop.hive.llap.daemon.service.hosts=@llap0" --conf "spark.hadoop.hive.zookeeper.quorum=sandbox-hdp.hortonworks.com:2181"
 
+spark-shell --conf "spark.sql.hive.hiveserver2.jdbc.url=jdbc:hive2://sandbox-hdp.hortonworks.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;user=hive" --conf "spark.datasource.hive.warehouse.metastoreUri=thrift://sandbox-hdp.hortonworks.com:9083" --conf "spark.hadoop.hive.llap.daemon.service.hosts=@llap0" --conf "spark.hadoop.hive.zookeeper.quorum=sandbox-hdp.hortonworks.com:2181"
+
+spark-shell --conf "spark.sql.hive.metastore.version=3.0" --conf "spark.sql.warehouse.dir=/apps/spark/warehouse"
+
 import com.hortonworks.hwc.HiveWarehouseSession
 import com.hortonworks.hwc.HiveWarehouseSession._
 val hive = HiveWarehouseSession.session(spark).build()
