@@ -6,21 +6,6 @@ import org.apache.spark.sql.types.{StringType, StructField, StructType}
 class HiveSparkAppSuit extends SharedSQLContext{
 
    test("Data insertion HiveSparkApp") {
-    /*val rdd = sqlContext.sparkContext.parallelize(Array(
-      Row("100", "Joe Tan", "600234912", "130 Tambo Avenue", "Y", "miles"),
-      Row("101", "Leo Dan", "234598591", "380 Cultura Rd.", "N", "miles"),
-      Row("102", "San Holo", "589654212", "290 Sol Rd.", "Y", "miles")))
-
-    val driverId = new StructField("driverId", StringType, nullable = true)
-    val name = new StructField("name", StringType, nullable = true)
-    val ssn = new StructField("ssn", StringType, nullable = true)
-    val location = new StructField("location", StringType, nullable = true)
-    val certified = new StructField("certified", StringType, nullable = true)
-    val wagePlan = new StructField("wage_plan", StringType, nullable = true)
-
-    val schema = StructType(Array(driverId, name, ssn, location, certified, wagePlan))
-    //spark.sqlContext.createDataFrame(rdd, schema).createOrReplaceTempView("drivers")
-    */
     val hiveSparkApp = new HiveSparkApp()
     hiveSparkApp.spark = spark
     val spark_data = "data-engineer-bootcamp-assessment-master/data-spark/"

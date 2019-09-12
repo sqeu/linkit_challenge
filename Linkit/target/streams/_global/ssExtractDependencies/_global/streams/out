@@ -1,13 +1,9 @@
-[error] sbt.librarymanagement.ResolveException: Error downloading org.apache.hbase:hbase-spark:2.0.2.3.1.0.6-1
+[error] sbt.librarymanagement.ResolveException: Error downloading com.hortonworks.hive:hive-warehouse-connector_2.11:1.0.0.3.1.2.1-1
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\hugo_\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/org/apache/hbase/hbase-spark/2.0.2.3.1.0.6-1/hbase-spark-2.0.2.3.1.0.6-1.pom
-[error] Error downloading com.hortonworks:shc-core:1.1.1-2.1-s_2.11
-[error]   Not found
-[error]   Not found
-[error]   not found: C:\Users\hugo_\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/com/hortonworks/shc-core/1.1.1-2.1-s_2.11/shc-core-1.1.1-2.1-s_2.11.pom
+[error]   not found: C:\Users\S80240\.ivy2\local\com.hortonworks.hive\hive-warehouse-connector_2.11\1.0.0.3.1.2.1-1\ivys\ivy.xml
+[error]   download error: Caught java.net.ConnectException: Connection timed out: connect (Connection timed out: connect) while downloading https://repo1.maven.org/maven2/com/hortonworks/hive/hive-warehouse-connector_2.11/1.0.0.3.1.2.1-1/hive-warehouse-connector_2.11-1.0.0.3.1.2.1-1.pom
+[error]   download error: Caught java.net.ConnectException: Connection refused: connect (Connection refused: connect) while downloading https://repo.hortonworks.com/content/repositories/releases/com/hortonworks/hive/hive-warehouse-connector_2.11/1.0.0.3.1.2.1-1/hive-warehouse-connector_2.11-1.0.0.3.1.2.1-1.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:245)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$34(CoursierDependencyResolution.scala:214)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -38,13 +34,9 @@
 [error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 [error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 [error] 	at java.lang.Thread.run(Thread.java:748)
-[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.apache.hbase:hbase-spark:2.0.2.3.1.0.6-1
+[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading com.hortonworks.hive:hive-warehouse-connector_2.11:1.0.0.3.1.2.1-1
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\hugo_\.ivy2\local\org.apache.hbase\hbase-spark\2.0.2.3.1.0.6-1\ivys\ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/org/apache/hbase/hbase-spark/2.0.2.3.1.0.6-1/hbase-spark-2.0.2.3.1.0.6-1.pom
-[error] Error downloading com.hortonworks:shc-core:1.1.1-2.1-s_2.11
-[error]   Not found
-[error]   Not found
-[error]   not found: C:\Users\hugo_\.ivy2\local\com.hortonworks\shc-core\1.1.1-2.1-s_2.11\ivys\ivy.xml
-[error]   not found: https://repo1.maven.org/maven2/com/hortonworks/shc-core/1.1.1-2.1-s_2.11/shc-core-1.1.1-2.1-s_2.11.pom
+[error]   not found: C:\Users\S80240\.ivy2\local\com.hortonworks.hive\hive-warehouse-connector_2.11\1.0.0.3.1.2.1-1\ivys\ivy.xml
+[error]   download error: Caught java.net.ConnectException: Connection timed out: connect (Connection timed out: connect) while downloading https://repo1.maven.org/maven2/com/hortonworks/hive/hive-warehouse-connector_2.11/1.0.0.3.1.2.1-1/hive-warehouse-connector_2.11-1.0.0.3.1.2.1-1.pom
+[error]   download error: Caught java.net.ConnectException: Connection refused: connect (Connection refused: connect) while downloading https://repo.hortonworks.com/content/repositories/releases/com/hortonworks/hive/hive-warehouse-connector_2.11/1.0.0.3.1.2.1-1/hive-warehouse-connector_2.11-1.0.0.3.1.2.1-1.pom

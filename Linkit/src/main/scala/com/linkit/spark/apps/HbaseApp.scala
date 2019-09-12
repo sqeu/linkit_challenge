@@ -17,23 +17,22 @@ class HbaseApp  {
   }
 
   def insert(catalog: String,df:DataFrame) {
-    df
-      .write.options(Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "4"))
-      .format("org.apache.spark.sql.execution.datasources.hbase")
-      .save()
+    try {
+      df
+        .write.options(Map(HBaseTableCatalog.tableCatalog -> catalog, HBaseTableCatalog.newTable -> "4"))
+        .format("org.apache.spark.sql.execution.datasources.hbase")
+        .save()
+    } catch {
+      case argument:IllegalArgumentException => println("Updating spark may be required")
+    }
   }
 
   def loadDangerousDriver(filePath:String,catalog:String) {
-    //subir hdfs
-    //leer csv
-    //val filePath ="/workspace/data-hbase/dangerous-driver.csv"
     val dangerous_driver = spark.read.format("csv").option("header", "true").load(filePath)
-    //cargar hdfs a tabla
     insert(catalog, dangerous_driver)
   }
 
   def loadExtraDriver(filePath:String, catalog:String) {
-    //val filePath2 ="/workspace/data-hbase/extra-driver.csv"
     val extra_driver = spark.read.format("csv").option("header", "true").load(filePath)
       .drop("eventId")
       .withColumn("eventId", lit("4"))
