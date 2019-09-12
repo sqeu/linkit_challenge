@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac80865-c946-493d-8238-4d7ef199973b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/config-classes/$122212770eb9ac2196d3$.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/config-classes/$122212770eb9ac2196d3.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/config-classes/$122212770eb9ac2196d3.class" beforeDir="false" />
@@ -154,7 +155,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/linkit/spark/utils/Utils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state relative-caret-position="270">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#32#51#0" expanded="true" />
@@ -580,7 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/linkit/spark/utils/Utils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="270">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#32#51#0" expanded="true" />

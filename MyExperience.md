@@ -2,27 +2,27 @@
 
 ## HDP Sandbox
 
-At first I wanted to use a virtual machine in VMWare with bridge connection because it would have been less resource intensive to deploy my app from another laptop, but it didn't work, HDP kept asking for a certain network. Therefore, I decided to keep the NAT connection. However, my laptop and IntelliJ were slowing down, I think it was because the Sandbox was causing my laptop to start swapping, 16GB of RAM were not enough. 
+At first I wanted to use a virtual machine in VMWare with bridge connection because it would have been less resource intensive to deploy my app from another laptop, but it didn't work, HDP kept asking for a certain network. Therefore, I decided to keep the NAT connection. However, my laptop and IntelliJ were slowing down, I think it was because the Sandbox was causing my laptop to start swapping, 16GB of RAM on Windows were not enough. 
 Also, the Sandbox kept killing HBase. Because of that reason, I tried to use docker but it failed due to size constraints.
-I did not wanted to spend more time so I went back to use VMWare but this time I turned off as many services as I could and assigned more RAM to the VM. This worked and I was also able to keep HBase up, at the expense of not being able to keep IntelliJ open.
+I did not wanted to spend more time setting up the environment so I went back to use VMWare but this time I turned off as many services as I could and assigned more RAM to the VM. This worked and I was also able to keep HBase up, at the expense of not being able to keep IntelliJ open.
 
 
 ## HDFS & Hive on Spark
 I wrote the code on this section and the following ones keeping in mind that I wanted to make it as reusable as posible.
 
 - For uploading the csv files to HDFS:
-    - Even thought Spark is able to do this, it can be inconsistent in a distributed system. Unless there is a shared folder across all the nodes in a location with the same name, then it might be feasable. Additionally, I can reuse this portion of code for the next section of the challenge. Therefore, I used Hadoop libraries instead of Spark.
+    - Even thought Spark is able to do this, it can be inconsistent in a distributed system. Unless there is a shared folder with the same name across all the nodes, then it might be feasable. Additionally, I can reuse this portion of code for the next section of the challenge. Therefore, I used Hadoop libraries instead of Spark.
 -  For the table creation:
     - I had to choose a format in which I could save my data, I asked myself which can be more convenient in this case. Avro is good if you want a flexible schema, however parquet can be faster at reading and is column-oriented making it great for analytical purposes. Additionally, in the following questions I need to create queries with certain columns, that was one of the reasons of why I chose parquet.
-    - I also had the choice of creating the table as external and reading directly from the csv. However, the header in the csv would have make this a little cumbersome. Also, parsing the csv file is slower than parquet. I chose external because that way it was also easier to setup the connection between hive and spark.
-    - I had the options to create the table explicitly (create table) or make spark/hive infer a schema (create table as). I wanted to be more explicit and be more in control when defining the table, because only then I can define data types, constraints and more for the table. Even though, "create table as" results in shorter code it might not be appropriate if you want it to run more than once. That is why I chose to do it via the "create table".
-    - The schema I created has slightly different names, the main change is that instead of using "-" I used "_", otherwise spark fails to parse the names. It might think you are trying to do a math operation. I had two options, either escaping the columns with a backtick "`" and change my schema or change the name of the fields after reading it with spark. I chose the latter because in the future it would be much easier to use than trying to figure out that you need to use backticks.
-- Outputting the dataframe was the most straightforward step, just an inner join.
+    - I also had the choice of creating the table as external and reading directly from the csv. However, the header in the csv would have make this a little cumbersome. Also, parsing the csv file is slower than parquet. I chose to create an external table with parquet because it was not only easier to setup the connection between Hive and Spark but faster overall.
+    - Initially, I had the options to create the table explicitly (create table) or make spark/hive infer a schema (create table as). I wanted to be more explicit and be more in control when defining the table, because only then I can define data types, constraints and more for the table. Even though, "create table as" results in shorter code it might not be appropriate if you want it to run more than once. That is why I chose to do it via the "create table".
+    - The schema I created has slightly different names than the headers in the csv, the main change is that instead of using "-" I used "_", I did this because Spark fails to parse the column names. It might think you are trying to do a math operation. I had two options, either escaping the columns with a backtick "`" and change my schema or change the name of the fields after reading it with Spark. I chose the latter because in the future it would be much easier to use than trying to figure out that you need to use backticks.
+- Outputting the final dataframe was the most straightforward step, just an inner join. However, since this part of the challenge required me to read from Hive, I would have had problems connecting to Hive since I didn't have LLAP, more on this in next point.
 - Spark connection with Hive
-    - At first I had issues trying to see my results in Hive, I spent a quite some time trying to debug why my table was not showing in Hive and why the last dataframe was increasing in rows and duplicating them. This didn't happend to me before at clients. Then I found [this] (https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_hivewarehousesession_api_operations.html). So actually my table and data are not really in Hive, they are really in the Spark catalog. 
-    - With that in mind, I tried the Hive Warehouse Connector (HWC) so I could use Spark with the hive catalog, however if I had used it entirely I wouldn't have been able to read the data because I didn't have LLAP (low-latency analytical processing) set-up. Therefore, having an external table was more convenient.
+    - At first I had issues trying to see my results in Hive, I spent a quite some time trying to debug why my table was not showing in Hive and why the last dataframe was increasing in rows and duplicating them. This didn't happend to me before at clients. Then I found [this] (https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/integrating-hive/content/hive_hivewarehousesession_api_operations.html). So actually my table and data are not really in Hive, they are actually in the Spark catalog. 
+    - With that in mind, I tried the Hive Warehouse Connector (HWC) so I could use Spark with the Hive catalog, however if I had used it entirely I wouldn't have been able to read the table because I didn't have LLAP (low-latency analytical processing) set-up. Therefore, having an external table was more convenient.
     - By the way, I had issues trying to connect to Hive through the HWC, I blame this on the documentation since it didn't specify that I needed to add a users to the jdbc string they tell you to use.
-    - I ended up changing the metastore.catalog.default to hive from hive-site.xml. Only then spark was able to read from the hive catalog easily.
+    - I ended up changing the metastore.catalog.default to hive from the hive-site.xml. Only then spark was able to read from the hive catalog easily.
 
 ## HBase
 
@@ -52,5 +52,9 @@ I wrote the code on this section and the following ones keeping in mind that I w
     - My first worry when I started making the dockerfile was how am I going to establish the connection between the docker and the HDP, after some time of failed attempts I remembered that the HDP Sandbox uses docker inside a VM and that when two containers are in the same user-defined network they have full connectivity between each other. Luckily, the sandbox uses a user-defined network.
     - I liked doing it this way, since I didn't have to worry about ports. Also, it was creative because I had to connect directly to the sandbox VM to take advantage of its docker.
     - The only file that I used from the HDP Sandbox was the hbase-site. After that, it all ran as it should. However, I had to handle an exception due to using an older Spark version.
-    - I couldn't manage to connect to the Hive metastore from the container, I suspect is because of a library or even the spark version.
-    - I used as a base the dockerfile from p7hb/docker-spark/, modified it by adding the necessary commands and files.
+    - I managed to get the application to work with the HDFS, HBase from the HDP Sandbox, however I couldn't manage to connect to the Hive metastore from the container, I suspect is because of a library or even the spark version.
+    - I used as a base the dockerfile from p7hb/docker-spark, modified it by adding the necessary commands and files.
+
+##Final comments
+
+- I learned a lot from this challenge, especially about connectors and connections from another environment. I used to take for granted the connections with HDFS and Hive becuase when I go to clients they usually have everything ready to use. Also, they have older versions of their components, so it took me by surprise about that change on the default catalog that Spark uses.
